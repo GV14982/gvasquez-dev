@@ -71,6 +71,7 @@ a {
 
 .project-image {
   height: auto;
+  align-items: flex-start;
 }
 
 @media (max-width: 1000px) {
