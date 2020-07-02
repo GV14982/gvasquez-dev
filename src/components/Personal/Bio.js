@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Bio = () => {
   return (
-    <div className="bg-secondary m-3 card" style={{ width: "70%" }}>
+    <div className="bio">
       <div className="p-5">
         <p className="card-text">Hi there, I'm a self taught (well mostly self taught) web developer from Easton PA. I mostly focus on the MERN stack, but I'm also proficient with PHP (in the form of Laravel and Wordpress).</p>
         <br />

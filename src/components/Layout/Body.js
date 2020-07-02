@@ -5,7 +5,7 @@ import { Projects } from '../Professional/Projects';
 
 export const Body = ({ scrollTop }) => {
   return (
-    <div className="container d-flex flex-column">
+    <div className="d-flex flex-column">
       <div className="d-flex justify-content-between personal">
         <Headshot />
         <Bio />
