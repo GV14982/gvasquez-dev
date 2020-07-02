@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #2d2d2d;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+a {
+  color: blue;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.rounded {
+  border-radius: 1%;
+}
+
+.more-rounded {
+  border-radius: 3rem;
+}
+
+.shadow {
+  box-shadow: 0 5px 4px -4px #e8e8e8;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.headshot {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* .buffs {
+  margin-left: -100vw;
+}
+
+.ttdwtwgc {
+  margin-right: -100vw;
+} */
+
+.card-title {
+  color: #e8e8e8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.card-subtitle {
+  color: #e8e8e8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.card-text {
+  color: #e8e8e8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .personal {
+    margin-left: 5%;
+    /* margin-right: auto; */
+    flex-direction: column;
+    width: 100vw
+  }
+  
+  .headshot-div {
+    padding-left: 10%;
+  }
+
+  .headshot {
+    /* margin-left: 25%; */
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin-left: 25%;
+    margin-right: auto;
+  }
+}
