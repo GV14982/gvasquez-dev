@@ -94,6 +94,18 @@ a {
   margin-top: 35vh;
   z-index: 2;
   background-color: #2d2d2d;
+  overflow: hidden;
+}
+
+.thanks {
+  position: absolute;
+  margin-right: 1vw;
+  z-index: 3;
+  border-radius: 2%;
+}
+
+.thanks p {
+  padding: 5%;
 }
 
 .contact-button {
@@ -110,6 +122,10 @@ a {
   background-color: #2d2d2d;
   font-size: 1.2vw;
   padding: .5vw
+}
+
+#submit {
+  margin-bottom: 1vw;
 }
 
 @media (max-width: 1000px) {
