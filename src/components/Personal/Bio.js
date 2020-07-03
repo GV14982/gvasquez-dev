@@ -3,7 +3,7 @@ import React from 'react'
 export const Bio = ({ size }) => {
   return (
     <div className="bio">
-      <div className={`p-${size.width > 990 ? "5" : "1"}`}>
+      <div className={`p-${size.width > 990 ? "5" : "4"}`}>
         <p className="card-text">Hi there, I'm a self taught (well mostly self taught) web developer from Easton PA. I mostly focus on the MERN stack, but I'm also proficient with PHP (in the form of Laravel and Wordpress).</p>
         <br />
         <p className="card-text">I am also comfortable with Python, Ruby, Bash, git, docker, and SQL databases. I have a background in IT and computer repair, which adds to my skill sets when it comes to the underlying technology that supports the software I build.</p>

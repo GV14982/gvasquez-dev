@@ -4,7 +4,7 @@ import { TTDWTWGC } from './TTDWTWGC';
 
 export const Projects = ({ scrollTop }) => {
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div className="projects">
       <Buffs scrollTop={scrollTop} />
       <TTDWTWGC scrollTop={scrollTop} />
     </div>

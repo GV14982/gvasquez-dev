@@ -12,7 +12,7 @@ export const Buffs = ({ scrollTop }) => {
 
   const from_left = useSpring({ marginLeft: display ? "0vw" : "-100vw", opacity: display ? 1 : 0, transform: display ? "scale(1,1)" : "scale(0.5,0.5)" })
   return (
-    <animated.div style={from_left} className="container my-3 buffs" ref={ref}>
+    <animated.div style={from_left} className="container my-3 project" ref={ref}>
       <div className="card bg-secondary">
         <div className="card-body">
           <p className="card-title">Buffs</p>

@@ -15,6 +15,10 @@ a {
   color: blue;
 }
 
+.app {
+  scroll-snap-type: mandatory;
+}
+
 .circle {
   border-radius: 50%;
 }
@@ -61,10 +65,51 @@ a {
   font-size: 20px;
 }
 
+.projects {
+  scroll-snap-type: mandatory;
+}
+
+.project {
+  scroll-snap-align: start;
+}
+
 .project-image {
   width: 49%;
   height: auto;
   align-items: flex-start;
+}
+
+.form-group label {
+  color: #e8e8e8;
+}
+
+.contact {
+  color: #e8e8e8;
+  position: fixed;
+  border-style: solid;
+  border-radius: 5%;
+  padding: 1%;
+  width: 20vw;
+  height: auto;
+  margin-top: 35vh;
+  z-index: 2;
+  background-color: #2d2d2d;
+}
+
+.contact-button {
+  position: fixed;
+  z-index: 2;
+  width: 7vw;
+  height: 7vw;
+  margin-top: 50vh;
+  border-style: solid;
+  border-radius: 40% 0% 0% 40%;
+  text-align: center;
+  color: #e8e8e8;
+  line-height: 4.5vw;
+  background-color: #2d2d2d;
+  font-size: 1.2vw;
+  padding: .5vw
 }
 
 @media (max-width: 1000px) {
