@@ -16,7 +16,7 @@ a {
 }
 
 .app {
-  scroll-snap-type: mandatory;
+  overflow: hidden;
 }
 
 .circle {
@@ -87,11 +87,11 @@ a {
   color: #e8e8e8;
   position: fixed;
   border-style: solid;
-  border-radius: 5%;
+  border-radius: 2vw;
   padding: 1%;
   width: 20vw;
   height: auto;
-  margin-top: 35vh;
+  margin-top: 30vh;
   z-index: 2;
   background-color: #2d2d2d;
   overflow: hidden;
@@ -113,7 +113,7 @@ a {
   z-index: 2;
   width: 7vw;
   height: 7vw;
-  margin-top: 50vh;
+  margin-top: 40vh;
   border-style: solid;
   border-radius: 40% 0% 0% 40%;
   text-align: center;
@@ -141,6 +141,16 @@ a {
     width: 50vw;
     height: 50vw;
   }
+
+  .contact {
+    width: 25vw;
+  }
+
+  .contact-button {
+    font-size: 2vw;
+    width: 8vw;
+    height: 8vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -161,10 +171,27 @@ a {
   .card-text {
     font-size: 16px;
   }
+  .contact {
+    width: 35vw;
+  }
+  .contact-button {
+    width: 11vw;
+    height: 11vw;
+  }
 }
 
 @media (max-width: 625px) {
   .navbar {
     padding-left: 5%;
+  }
+
+  .contact {
+    width: 40vw;
+  }
+
+  .contact-button {
+    font-size: 3vw;
+    width: 15vw;
+    height: 15vw;
   }
 }

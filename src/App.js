@@ -28,8 +28,27 @@ function App() {
     from: { opacity: 0 }
   });
 
-  const contact = useSpring({ marginLeft: display ? "80vw" : "100vw" })
-  const contactButton = useSpring({ marginLeft: display ? "73vw" : "93vw" })
+  let contactHidden = "100vw";
+  let contactShown = "80vw";
+  let contactButtonHidden = "93vw";
+  let contactButtonShown = "73vw";
+
+  if (size.width <= 1000 && size.width > 768) {
+    contactShown = "75vw";
+    contactButtonHidden = "92vw";
+    contactButtonShown = "67vw";
+  } else if (size.width <= 768 && size.width > 625) {
+    contactShown = "65vw";
+    contactButtonHidden = "89vw";
+    contactButtonShown = "54vw";
+  } else if (size.width <= 625) {
+    contactShown = "60vw";
+    contactButtonHidden = "85vw";
+    contactButtonShown = "45vw";
+  }
+
+  const contact = useSpring({ marginLeft: display ? contactShown : contactHidden })
+  const contactButton = useSpring({ marginLeft: display ? contactButtonShown : contactButtonHidden })
   const onClick = e => {
     setDisplay(!display);
   }

@@ -40,7 +40,7 @@ export const Contact = () => {
     });
   }
 
-  const onClick = async e => {
+  const onSubmit = async e => {
     e.preventDefault()
     await newAirtableRecord(formState);
     setFormState(initialState);
@@ -49,6 +49,7 @@ export const Contact = () => {
     setTimeout(() => {
       setSubmitted(false);
     }, 5000);
+    return false;
   }
 
   const thanks = useSpring({ to: { marginTop: submitted ? "0vh" : "-15vh" }, onRest: () => { if (!submitted) setDisplay(false) } })
@@ -60,13 +61,13 @@ export const Contact = () => {
           Thanks for submitting your inquiry!
         </p>
       </animated.div>}
-      <form>
-        <div className="form-group">
-          <label htmlFor="name">Name<small>*</small></label>
+      <form className="p-1" onSubmit={onSubmit}>
+        <div className="form-group" onSubmit={e => e.preventDefault()}>
+          <label htmlFor="name">Name <small>(required)</small></label>
           <input className="form-control" type="text" value={formState.name} name="name" id="name" required placeholder="Your Name" onChange={onChange} />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email<small>*</small></label>
+          <label htmlFor="email">Email <small>(required)</small></label>
           <input className="form-control" type="email" value={formState.email} name="email" id="email" required placeholder="Your Email" onChange={onChange} />
         </div>
         <div className="form-group">
@@ -77,8 +78,8 @@ export const Contact = () => {
           <label htmlFor="phone-numb">Description</label>
           <textarea className="form-control" name="description" id="description" value={formState.description} placeholder="How can I help you?" onChange={onChange} />
         </div>
+        <input className="btn btn-secondary" id="submit" name="submit" type="submit" />
       </form>
-      <button className="btn btn-secondary" id="submit" onClick={onClick} name="submit" type="submit">Submit</button>
     </div>
   )
 }
