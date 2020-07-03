@@ -22,8 +22,6 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
-  console.log(scrollTop);
-
   const props = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 }
@@ -34,7 +32,7 @@ function App() {
   return (
     <animated.div className="container" style={props}>
       <Header size={size} />
-      <Body scrollTop={scrollTop} className="body" />
+      <Body scrollTop={scrollTop} size={size} className="body" />
       <Footer />
     </animated.div>
   );
