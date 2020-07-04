@@ -32,21 +32,21 @@ function App() {
 
   let contactHidden = "100vw";
   let contactShown = "80vw";
-  let contactButtonHidden = "93vw";
-  let contactButtonShown = "73vw";
+  let contactButtonHidden = "94vw";
+  let contactButtonShown = "74vw";
 
   if (size.width <= 1000 && size.width > 768) {
     contactShown = "75vw";
-    contactButtonHidden = "92vw";
-    contactButtonShown = "67vw";
+    contactButtonHidden = "93vw";
+    contactButtonShown = "68vw";
   } else if (size.width <= 768 && size.width > 625) {
     contactShown = "65vw";
     contactButtonHidden = "89vw";
     contactButtonShown = "54vw";
   } else if (size.width <= 625) {
     contactShown = "60vw";
-    contactButtonHidden = "85vw";
-    contactButtonShown = "45vw";
+    contactButtonHidden = "86vw";
+    contactButtonShown = "46vw";
   }
 
   const contact = useSpring({ marginLeft: display ? contactShown : contactHidden })

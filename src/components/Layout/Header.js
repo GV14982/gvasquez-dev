@@ -8,6 +8,7 @@ export const Header = ({ size }) => {
   return (
     <nav className={navbar}>
       <div className={`m${size.width > 625 ? "x-3" : "-2"}`}>
+        <img src="/GV.png" className="ml-5" alt="" />
         <h2 className="card-title">
           Graham Vasquez
         </h2>
