@@ -11,7 +11,7 @@ export const Buffs = ({ scrollTop, size }) => {
     }
   }
 
-  const iPhone = navigator.platform.includes("iPhone") || navigator.platform.includes("iPad") ? { height: "27.5%" } : {};
+  const iPhone = navigator.platform.includes("iPhone") || navigator.platform.includes("iPad") || navigator.userAgent.includes("Safari") ? { height: "27.5%" } : {};
 
   let animate = { marginLeft: "-100vw" }
 
