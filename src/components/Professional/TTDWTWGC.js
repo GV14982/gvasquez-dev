@@ -1,16 +1,37 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 
-export const TTDWTWGC = ({ scrollTop }) => {
-  const ref = useRef(null)
+export const TTDWTWGC = ({ scrollTop, size }) => {
+  const [rect, setRect] = useState(null);
   const [display, setDisplay] = useState(false);
-  if (ref.current) {
-    if (!display && ref.current.getBoundingClientRect().y < (scrollTop + window.innerHeight) / 2) {
-      setDisplay(true);
+  const ref = e => {
+    if (!e) return;
+    if (JSON.stringify(rect) !== JSON.stringify(e.getBoundingClientRect())) {
+      setRect(e.getBoundingClientRect())
     }
   }
 
-  const from_right = useSpring({ marginRight: display ? "0vw" : "-100vw", opacity: display ? 1 : 0, transform: display ? "scale(1,1)" : "scale(0.5,0.5)" });
+
+  let animate = { marginRight: "-100vw" }
+
+  if (rect) {
+    if (!display && scrollTop > rect.top) {
+      setDisplay(true);
+    }
+    if (size.height / 2 < rect.top) {
+      animate = { marginRight: display ? "0vw" : "-100vw", opacity: display ? 1 : 0 }
+    } else {
+      if (!display) {
+        setDisplay(true);
+      }
+      animate = {
+        from: { marginRight: "-100vw", opacity: 0 },
+        to: { marginRight: "0vw", opacity: 1 }
+      }
+    }
+  }
+
+  const from_right = useSpring(animate);
   return (
     <animated.div style={from_right} ref={ref} className="container my-3 project">
       <div className="card bg-secondary">

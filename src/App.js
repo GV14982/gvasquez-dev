@@ -12,6 +12,8 @@ function App() {
   const size = useWindowSize(window);
   const [scrollTop, setScrollTop] = useState(0);
   const [display, setDisplay] = useState(false);
+  const [mouseDown, setMouseDown] = useState(false);
+  const [swipe, setSwipe] = useState(0);
   const onScroll = () => {
     const scrollPos = document.documentElement.scrollTop;
 
@@ -52,9 +54,56 @@ function App() {
   const onClick = e => {
     setDisplay(!display);
   }
+  // const onMouseDown = e => {
+  //   setSwipe(e.clientX);
+  //   setMouseDown(true);
+  // }
+
+  // const onMouseUp = e => {
+  //   setSwipe(0);
+  //   setMouseDown(false);
+  // }
+
+  // const mouseMove = e => {
+  //   if (mouseDown) {
+  //     if (!display && e.clientX <= swipe - 100) {
+  //       setDisplay(true);
+  //     } else if (display && e.clientX >= swipe + 100) {
+  //       setDisplay(false);
+  //     }
+  //   }
+  // }
+
+  const onTouchStart = e => {
+    setSwipe(e.touches[0].clientX);
+    setMouseDown(true);
+  }
+
+  const onTouchEnd = e => {
+    setSwipe(0);
+    setMouseDown(false);
+  }
+
+  const onTouchMove = e => {
+    if (mouseDown) {
+      if (!display && e.touches[0].clientX <= swipe - 100) {
+        setDisplay(true);
+      } else if (display && e.touches[0].clientX >= swipe + 100) {
+        setDisplay(false);
+      }
+    }
+  }
 
   return (
-    <animated.div className="app" style={props}>
+    <animated.div
+      className="app"
+      style={props}
+      // onMouseDown={onMouseDown}
+      // onMouseUp={onMouseUp}
+      // onMouseMove={mouseMove}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+      onTouchMove={onTouchMove}>
       <animated.div style={contact}>
         <Contact />
       </animated.div>

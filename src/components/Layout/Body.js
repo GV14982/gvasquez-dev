@@ -10,7 +10,7 @@ export const Body = ({ scrollTop, size }) => {
         <Headshot />
         <Bio size={size} />
       </div>
-      <Projects scrollTop={scrollTop} />
+      <Projects scrollTop={scrollTop} size={size} />
     </div>
   )
 }
