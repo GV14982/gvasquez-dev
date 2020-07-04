@@ -90,7 +90,7 @@ a {
 .contact {
   color: #2d2d2d;
   position: fixed;
-  border-style: solid;
+  border-style: hidden;
   border-radius: 2vw;
   padding: 1%;
   width: 20vw;
