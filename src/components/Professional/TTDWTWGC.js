@@ -16,7 +16,7 @@ export const TTDWTWGC = ({ scrollTop, size }) => {
   let animate = { marginRight: "-100vw" }
 
   if (rect) {
-    if (!display && scrollTop > rect.top) {
+    if (!display && scrollTop + 50 > rect.top) {
       setDisplay(true);
     }
     if (size.height / 2 < rect.top) {

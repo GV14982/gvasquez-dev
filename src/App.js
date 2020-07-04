@@ -35,7 +35,7 @@ function App() {
   let contactButtonHidden = "94vw";
   let contactButtonShown = "74vw";
 
-  if (size.width <= 1000 && size.width > 768) {
+  if (size.width <= 1024 && size.width > 768) {
     contactShown = "75vw";
     contactButtonHidden = "93vw";
     contactButtonShown = "68vw";

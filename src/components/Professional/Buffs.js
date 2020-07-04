@@ -16,7 +16,7 @@ export const Buffs = ({ scrollTop, size }) => {
   let animate = { marginLeft: "-100vw" }
 
   if (rect) {
-    if (!display && scrollTop > rect.top) {
+    if (!display && scrollTop > rect.top - 100) {
       setDisplay(true);
     }
     if (size.height / 3 < rect.top) {
