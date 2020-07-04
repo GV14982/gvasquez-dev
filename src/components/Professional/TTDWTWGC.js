@@ -35,7 +35,7 @@ export const TTDWTWGC = ({ scrollTop, size }) => {
   const from_right = useSpring(animate);
   return (
     <animated.div style={from_right} ref={ref} className="container my-3 project">
-      <div className="card bg-secondary">
+      <div className="card">
         <div className="card-body">
           <p className="card-title">TTDWTWGC</p>
           <p className="card-subtitle">Stands for "Things To Do When The World Gets Canceled"</p>

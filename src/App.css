@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  color: blue;
+  color: #2d2d2d;
 }
 
 .app {
@@ -79,12 +79,16 @@ a {
   align-items: flex-start;
 }
 
+.card {
+  background-color: #7C9D97;
+}
+
 .form-group label {
   color: #e8e8e8;
 }
 
 .contact {
-  color: #e8e8e8;
+  color: #2d2d2d;
   position: fixed;
   border-style: solid;
   border-radius: 2vw;
@@ -93,7 +97,7 @@ a {
   height: auto;
   margin-top: 27vh;
   z-index: 2;
-  background-color: #2d2d2d;
+  background-color: #744c40;
   overflow: hidden;
 }
 
@@ -114,12 +118,13 @@ a {
   width: 6vw;
   height: 6vw;
   margin-top: 40vh;
-  border-style: solid;
+  border-style: hidden;
+  border-right-style: solid;
   border-radius: 40% 0% 0% 40%;
   text-align: center;
   color: #e8e8e8;
   line-height: 4.5vw;
-  background-color: #2d2d2d;
+  background-color: #744c40;
   font-size: 1.2vw;
   padding: .5vw
 }
@@ -187,6 +192,7 @@ a {
 
   .contact {
     width: 40vw;
+    margin-top: 15vh;
   }
 
   .contact-button {

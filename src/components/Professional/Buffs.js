@@ -37,7 +37,7 @@ export const Buffs = ({ scrollTop, size }) => {
   return (
     <Fragment>
       <animated.div style={from_left} className="container my-3 project" ref={ref}>
-        <div className="card bg-secondary">
+        <div className="card">
           <div className="card-body">
             <p className="card-title">Buffs</p>
             <p className="card-subtitle">A platform to help streamers grow.</p>
