@@ -11,7 +11,7 @@ export const TTDWTWGC = ({ scrollTop, size }) => {
     }
   }
 
-  const iPhone = navigator.platform.includes("iPhone") ? { height: "27.5%" } : {};
+  const iPhone = navigator.platform.includes("iPhone") || navigator.platform.includes("iPad") || navigator.userAgent.includes("Safari") ? { height: "27.5%" } : {};
 
   let animate = { marginRight: "-100vw" }
 
