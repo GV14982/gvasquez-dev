@@ -91,7 +91,7 @@ a {
   padding: 1%;
   width: 20vw;
   height: auto;
-  margin-top: 30vh;
+  margin-top: 27vh;
   z-index: 2;
   background-color: #2d2d2d;
   overflow: hidden;
@@ -113,7 +113,7 @@ a {
   z-index: 2;
   width: 7vw;
   height: 7vw;
-  margin-top: 40vh;
+  margin-top: 35vh;
   border-style: solid;
   border-radius: 40% 0% 0% 40%;
   text-align: center;
