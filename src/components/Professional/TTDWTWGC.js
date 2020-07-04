@@ -11,6 +11,7 @@ export const TTDWTWGC = ({ scrollTop, size }) => {
     }
   }
 
+  const iPhone = navigator.platform.includes("iPhone") ? { height: "27.5%" } : {};
 
   let animate = { marginRight: "-100vw" }
 
@@ -40,8 +41,8 @@ export const TTDWTWGC = ({ scrollTop, size }) => {
           <p className="card-subtitle">Stands for "Things To Do When The World Gets Canceled"</p>
         </div>
         <div className="d-flex mx-5">
-          <img src="/ttdwtwgc_main.png" alt="" className="mx-2 rounded project-image" />
-          <img src="/ttdwtwgc_idea.png" alt="" className="mx-2 rounded project-image" />
+          <img src="/ttdwtwgc_main.png" alt="" style={iPhone} className="mx-2 rounded project-image" />
+          <img src="/ttdwtwgc_idea.png" alt="" style={iPhone} className="mx-2 rounded project-image" />
         </div>
         <div className="card-body">
           <p className="card-text">TTDWTWGC is another project I worked on with <a href="https://clickpopmedia.com/">ClickPopMedia</a>. We wanted to find a way to keep our minds busy when the US first started seeing case of COVID-19 and social distancing took effect.</p>
