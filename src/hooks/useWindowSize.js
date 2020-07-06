@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react';
 
 export const useWindowSize = (window) => {
   const isClient = typeof window === 'object';
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getSize = () => {
     return {
       width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined
+      height: isClient ? window.innerHeight : undefined,
     };
-  }
+  };
 
   const [windowSize, setWindowSize] = useState(getSize);
 
@@ -23,7 +22,8 @@ export const useWindowSize = (window) => {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return windowSize;
-}
+};
