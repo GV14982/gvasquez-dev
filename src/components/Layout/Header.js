@@ -1,23 +1,43 @@
 import React from 'react';
-import { Github } from '../Professional/Github';
-import { Linkedin } from '../Professional/Linkedin';
-import { Twitter } from '../Professional/Twitter';
+import { SocialLink } from '../Professional/SocialLink';
 
 export const Header = ({ size }) => {
-  let navbar = `navbar m-2 d-flex justify-content-${size.width > 625 ? "between" : "center"} align-items-center`
   return (
-    <nav className={navbar}>
-      <div className={`m${size.width > 625 ? "x-3" : "-2"}`}>
-        <img src="/GV.png" className="ml-5" alt="" />
-        <h2 className="card-title">
-          Graham Vasquez
-        </h2>
+    <nav
+      className={`navbar navbar-expand-md justify-content-${
+        size.width < 768 ? 'center' : 'between'
+      } m-2`}>
+      <div className='navbar-brand d-flex flex-column justify-content-center align-items-center'>
+        <img src='/GV.png' alt='' />
+        <h2 className='card-title'>Graham Vasquez</h2>
       </div>
-      <div className="d-flex justify-content-around">
-        <Github />
-        <Linkedin />
-        <Twitter />
+      <div>
+        <div className='collapse navbar-collapse'>
+          <div>
+            <h4 className='card-text ml-3'>Connect with me!</h4>
+            <div className='nav'>
+              <SocialLink
+                name='github'
+                url='https://github.com/gv14982'
+                image='/github.png'
+                nav={true}
+              />
+              <SocialLink
+                name='linkedin'
+                url='https://ghttps://www.linkedin.com/in/graham-vasquez-79b17a198/ithub.com/gv14982'
+                image='/linkedin.png'
+                nav={true}
+              />
+              <SocialLink
+                name='twitter'
+                url='https://twitter.com/___datboi_'
+                image='/twitter.png'
+                nav={true}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
-  )
-}
+  );
+};
