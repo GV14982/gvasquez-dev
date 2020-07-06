@@ -7,9 +7,12 @@ export const Header = ({ size }) => {
       className={`navbar navbar-expand-md justify-content-${
         size.width < 768 ? 'center' : 'between'
       } m-2`}>
-      <div className='navbar-brand d-flex flex-column justify-content-center align-items-center'>
+      <div
+        className={`navbar-brand d-flex flex-column justify-content-center align-items-center ${
+          size.width < 768 ? '' : 'ml-5'
+        }`}>
         <img src='/GV.png' alt='' />
-        <h2 className='card-title'>Graham Vasquez</h2>
+        <h4 className=''>Graham Vasquez</h4>
       </div>
       <div>
         <div className='collapse navbar-collapse'>

@@ -60,6 +60,7 @@ export const Projects = ({ scrollTop, size }) => {
           'Laravel',
           'MySQL',
           'jQuery',
+          'Bootstrap',
           'Node',
           'Express',
           'MongoDB',
@@ -75,7 +76,7 @@ export const Projects = ({ scrollTop, size }) => {
         title='Things to do when the world gets cancelled'
         subtitle='An activity idea generator in the era of social distancing.'
         description={<TTDWTWGCDescription />}
-        technologies={['jQuery', 'Node', 'Express', 'AirTable']}
+        technologies={['jQuery', 'Bootstrap', 'Node', 'Express', 'AirTable']}
         images={['ttdwtwgc_main.png', 'ttdwtwgc_idea.png']}
         animationSide='Right'
         githubURL='https://github.com/ClickPop/quarantine'
