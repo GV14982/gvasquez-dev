@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import { Header } from './components/Layout/Header'
-import { Body } from './components/Layout/Body'
-import { Footer } from './components/Layout/Footer'
+import { Header } from './components/Layout/Header';
+import { Body } from './components/Layout/Body';
+import { Footer } from './components/Layout/Footer';
 import { Contact } from './components/Contact/Contact';
-import { useWindowSize } from './hooks/useWindowSize'
-import { useSpring, animated } from 'react-spring'
+import { useWindowSize } from './hooks/useWindowSize';
+import { useSpring, animated } from 'react-spring';
 
 function App() {
   const size = useWindowSize(window);
@@ -18,42 +18,46 @@ function App() {
     const scrollPos = document.documentElement.scrollTop;
 
     setScrollTop(scrollPos);
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [])
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const props = useSpring({
     to: { opacity: 1 },
-    from: { opacity: 0 }
+    from: { opacity: 0 },
   });
 
-  let contactHidden = "100vw";
-  let contactShown = "80vw";
-  let contactButtonHidden = "94vw";
-  let contactButtonShown = "74vw";
+  let contactHidden = '100vw';
+  let contactShown = '80vw';
+  let contactButtonHidden = '94vw';
+  let contactButtonShown = '74vw';
 
   if (size.width <= 1024 && size.width > 768) {
-    contactShown = "75vw";
-    contactButtonHidden = "93vw";
-    contactButtonShown = "68vw";
+    contactShown = '75vw';
+    contactButtonHidden = '93vw';
+    contactButtonShown = '68vw';
   } else if (size.width <= 768 && size.width > 625) {
-    contactShown = "65vw";
-    contactButtonHidden = "89vw";
-    contactButtonShown = "54vw";
+    contactShown = '65vw';
+    contactButtonHidden = '89vw';
+    contactButtonShown = '54vw';
   } else if (size.width <= 625) {
-    contactShown = "60vw";
-    contactButtonHidden = "86vw";
-    contactButtonShown = "46vw";
+    contactShown = '60vw';
+    contactButtonHidden = '86vw';
+    contactButtonShown = '46vw';
   }
 
-  const contact = useSpring({ marginLeft: display ? contactShown : contactHidden })
-  const contactButton = useSpring({ marginLeft: display ? contactButtonShown : contactButtonHidden })
-  const onClick = e => {
+  const contact = useSpring({
+    marginLeft: display ? contactShown : contactHidden,
+  });
+  const contactButton = useSpring({
+    marginLeft: display ? contactButtonShown : contactButtonHidden,
+  });
+  const onClick = (e) => {
     setDisplay(!display);
-  }
+  };
   // const onMouseDown = e => {
   //   setSwipe(e.clientX);
   //   setMouseDown(true);
@@ -74,17 +78,17 @@ function App() {
   //   }
   // }
 
-  const onTouchStart = e => {
+  const onTouchStart = (e) => {
     setSwipe(e.touches[0].clientX);
     setMouseDown(true);
-  }
+  };
 
-  const onTouchEnd = e => {
+  const onTouchEnd = (e) => {
     setSwipe(0);
     setMouseDown(false);
-  }
+  };
 
-  const onTouchMove = e => {
+  const onTouchMove = (e) => {
     if (mouseDown) {
       if (!display && e.touches[0].clientX <= swipe - 100) {
         setDisplay(true);
@@ -92,28 +96,35 @@ function App() {
         setDisplay(false);
       }
     }
-  }
+  };
 
   return (
-    <animated.div
-      className="app"
-      style={props}
-      // onMouseDown={onMouseDown}
-      // onMouseUp={onMouseUp}
-      // onMouseMove={mouseMove}
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      onTouchMove={onTouchMove}>
+    <Fragment>
       <animated.div style={contact}>
         <Contact />
       </animated.div>
-      <animated.button style={contactButton} className="contact-button" onClick={e => onClick()}>
+      <animated.button
+        style={contactButton}
+        className='contact-button'
+        onClick={(e) => onClick()}>
         Contact
       </animated.button>
-      <Header size={size} />
-      <Body scrollTop={scrollTop} size={size} className="body" />
-      <Footer />
-    </animated.div>
+      <animated.div
+        className='app container'
+        style={props}
+        // onMouseDown={onMouseDown}
+        // onMouseUp={onMouseUp}
+        // onMouseMove={mouseMove}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        onTouchMove={onTouchMove}>
+        <Header size={size} />
+        <div className=''>
+          <Body scrollTop={scrollTop} size={size} className='row' />
+        </div>
+        <Footer />
+      </animated.div>
+    </Fragment>
   );
 }
 

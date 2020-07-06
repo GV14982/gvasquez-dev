@@ -5,12 +5,14 @@ import { Projects } from '../Professional/Projects';
 
 export const Body = ({ scrollTop, size }) => {
   return (
-    <div className="d-flex flex-column">
-      <div className="d-flex justify-content-between personal">
+    <div className='container'>
+      <div className='row justify-content-center align-items-center'>
         <Headshot />
-        <Bio size={size} />
+        <Bio />
       </div>
-      <Projects scrollTop={scrollTop} size={size} />
+      <div className='row'>
+        <Projects scrollTop={scrollTop} size={size} />
+      </div>
     </div>
-  )
-}
+  );
+};

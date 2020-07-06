@@ -43,6 +43,8 @@ a {
 .headshot {
   max-width: 400px;
   max-height: 400px;
+  width: 100%;
+  height: 100%;
 }
 
 .card-title {
@@ -74,13 +76,12 @@ a {
 }
 
 .project-image {
-  width: 49%;
+  width: 100%;
   height: auto;
-  align-items: flex-start;
 }
 
 .card {
-  background-color: #7C9D97;
+  background-color: #7c9d97;
 }
 
 .form-group label {
@@ -126,7 +127,7 @@ a {
   line-height: 4.5vw;
   background-color: #744c40;
   font-size: 1.2vw;
-  padding: .5vw
+  padding: 0.5vw;
 }
 
 #submit {
@@ -134,19 +135,6 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .personal {
-    flex-direction: column;
-  }
-  
-  .headshot-div {
-    padding-left: 20%;
-  }
-
-  .headshot {
-    width: 50vw;
-    height: 50vw;
-  }
-
   .contact {
     width: 25vw;
   }
@@ -159,14 +147,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  .headshot-div {
-   padding-left: 20%; 
-  }
-
-  /* .navbar {
-    padding-left: 25%;
-  } */
-
   .card-title {
     font-size: 30px;
   }
@@ -186,10 +166,6 @@ a {
 }
 
 @media (max-width: 625px) {
-  .navbar {
-    padding-left: 5%;
-  }
-
   .contact {
     width: 40vw;
     margin-top: 15vh;
