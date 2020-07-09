@@ -23,17 +23,21 @@ export const Project = ({
     }
   };
 
-  // const iPhone = navigator.platform.includes("iPhone") || navigator.platform.includes("iPad") || navigator.userAgent.includes("Safari") ? { height: "27.5%" } : {};
+  window.onscroll = (e) => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      console.log('BOTTOM');
+    }
+  };
 
   const side = `margin${animationSide}`;
 
   let animate = { [side]: '-100vw' };
 
   if (rect) {
-    if (!display && scrollTop > rect.top - 100) {
+    if (!display && rect.top < size.height / 3) {
       setDisplay(true);
     }
-    if (size.height / 3 < rect.top) {
+    if (size.height / 1.75 < rect.top) {
       animate = {
         [side]: display ? '0vw' : '-100vw',
         opacity: display ? 1 : 0,

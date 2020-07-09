@@ -68,6 +68,10 @@ a {
   font-size: 20px;
 }
 
+.projects-scroll-indicator h1 {
+  font-size: 5em;
+}
+
 .projects {
   scroll-snap-type: mandatory;
 }

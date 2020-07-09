@@ -26,8 +26,16 @@ function App() {
   }, []);
 
   const props = useSpring({
+    config: {
+      duration: 800,
+      easing: (t) => t * t * t,
+    },
     to: { opacity: 1 },
     from: { opacity: 0 },
+  });
+  const headerProps = useSpring({
+    to: { marginTop: '0vh', paddingBottom: '0vh' },
+    from: { marginTop: '-100vh', paddingBottom: '100vh' },
   });
 
   let contactHidden = '100vw';
@@ -109,20 +117,21 @@ function App() {
         onClick={(e) => onClick()}>
         Contact
       </animated.button>
-      <animated.div
-        className='app container'
-        style={props}
-        // onMouseDown={onMouseDown}
-        // onMouseUp={onMouseUp}
-        // onMouseMove={mouseMove}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-        onTouchMove={onTouchMove}>
-        <Header size={size} />
-        <div className=''>
+      <animated.div style={props}>
+        <div
+          className='app container'
+          // onMouseDown={onMouseDown}
+          // onMouseUp={onMouseUp}
+          // onMouseMove={mouseMove}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+          onTouchMove={onTouchMove}>
+          <animated.div style={headerProps}>
+            <Header size={size} />
+          </animated.div>
           <Body scrollTop={scrollTop} size={size} className='row' />
+          <Footer />
         </div>
-        <Footer />
       </animated.div>
     </Fragment>
   );
