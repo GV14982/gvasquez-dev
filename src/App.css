@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .btn:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
 }
 
 .border-2 {
@@ -45,12 +45,6 @@ body::-webkit-scrollbar-thumb {
 
 .thank-animation {
   animation: thanks 5s ease-in-out 1;
-}
-
-.scroller {
-  height: 2px;
-  border-radius: 25%;
-  animation: slider 10s ease-in-out infinite;
 }
 
 @keyframes thanks {
@@ -68,35 +62,6 @@ body::-webkit-scrollbar-thumb {
 
   100% {
     margin-top: -15vh;
-  }
-}
-
-@keyframes slider {
-  0% {
-    background-color: #fd1d1d;
-    width: 0%;
-    margin-left: 0%;
-  }
-
-  90% {
-    background-color: #fd1d1d;
-    width: 0%;
-    margin-left: 0%;
-    opacity: 0;
-  }
-
-  95% {
-    background-color: #833ab4;
-    width: 100%;
-    margin-left: 0%;
-    opacity: 1;
-  }
-
-  100% {
-    background-color: #fcb045;
-    width: 0%;
-    margin-left: 100%;
-    opacity: 0;
   }
 }
 

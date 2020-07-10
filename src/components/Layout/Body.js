@@ -13,7 +13,6 @@ export const Body = () => {
       <div className='row my-5 text-white text-center'>
         <div className='col-12'>
           <h1>Featured Projects</h1>
-          <div className='scroller'></div>
         </div>
       </div>
       <Projects />
