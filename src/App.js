@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { Header } from './components/Layout/Header';
@@ -23,15 +23,10 @@ library.add(
 function App() {
   return (
     <Fragment>
-      {/* <div>
-        <Contact />
-      </div>
-      <button className='contact-button' onClick={(e) => onClick()}>
-        Contact
-      </button> */}
       <div className='container pb-2'>
         <Header />
         <Body />
+        <Contact />
         <Footer />
       </div>
     </Fragment>

@@ -47,29 +47,29 @@ const TTDWTWGCDescription = () => {
   );
 };
 
-const NiceWordsDescription = () => {
-  return (
-    <div className='mx-4'>
-      <p className='card-text'>
-        Nice Words started as an email as a service product initially thought up
-        by{' '}
-        <ClickPopLink text='Chris Vasquez' url='https://twitter.com/clickpop' />
-        . I wanted to take the concept of having nice things to say, and allow
-        others to tap into that feature. So I built the Nice Words API, which is
-        a service that allows you to access our crowd funded compliments and
-        pleasentries for use in your application.
-      </p>
-      <p className='card-text'>
-        The Nice Words API is built on Node and Express utilizing OAuth for
-        authentication with analytics and rate limiting built in.
-      </p>
-    </div>
-  );
-};
+// const NiceWordsDescription = () => {
+//   return (
+//     <div className='mx-4'>
+//       <p className='card-text'>
+//         Nice Words started as an email as a service product initially thought up
+//         by{' '}
+//         <ClickPopLink text='Chris Vasquez' url='https://twitter.com/clickpop' />
+//         . I wanted to take the concept of having nice things to say, and allow
+//         others to tap into that feature. So I built the Nice Words API, which is
+//         a service that allows you to access our crowd funded compliments and
+//         pleasentries for use in your application.
+//       </p>
+//       <p className='card-text'>
+//         The Nice Words API is built on Node and Express utilizing OAuth for
+//         authentication with analytics and rate limiting built in.
+//       </p>
+//     </div>
+//   );
+// };
 
 export const Projects = () => {
   return (
-    <div className='row my-5'>
+    <div className='row'>
       <Project
         title='Buffs'
         subtitle='A platform to help streamers grow.'

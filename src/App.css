@@ -39,6 +39,32 @@ body::-webkit-scrollbar-thumb {
   border: #343a40 solid 1.3px;
 }
 
+.thank {
+  margin-top: -15vh;
+}
+
+.thank-animation {
+  animation: thanks 5s ease-in-out 1;
+}
+
+@keyframes thanks {
+  0% {
+    margin-top: -15vh;
+  }
+
+  15% {
+    margin-top: 1.3vh;
+  }
+
+  85% {
+    margin-top: 1.3vh;
+  }
+
+  100% {
+    margin-top: -15vh;
+  }
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
