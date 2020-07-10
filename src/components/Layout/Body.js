@@ -3,16 +3,19 @@ import { Bio } from '../Personal/Bio';
 import { Headshot } from '../Personal/Headshot';
 import { Projects } from '../Professional/Projects';
 
-export const Body = ({ scrollTop, size }) => {
+export const Body = () => {
   return (
-    <div className='container'>
-      <div className='row justify-content-center align-items-center'>
+    <div>
+      <div className='row align-items-center px-3'>
         <Headshot />
         <Bio />
       </div>
-      <div className='row'>
-        <Projects scrollTop={scrollTop} size={size} />
+      <div className='row my-5 text-white text-center'>
+        <div className='col-12'>
+          <h1>Featured Projects</h1>
+        </div>
       </div>
+      <Projects />
     </div>
   );
 };

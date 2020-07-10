@@ -1,17 +1,15 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const SocialLink = ({ name, url, image, nav }) => {
+export const SocialLink = ({ name, url, icon }) => {
+  console.log(name);
   return (
-    <div className={`nav-item bg-light rounded ${nav ? 'm-3' : ''}`}>
-      <div className='p-2'>
-        <a
-          href={url}
-          className='social-icon'
-          rel='noopener noreferrer'
-          target='_blank'>
-          <img src={image} alt={`${name} link`} className='social-icon' />
-        </a>
-      </div>
-    </div>
+    <a
+      href={url}
+      className='btn btn-light border-2 mx-2'
+      rel='noopener noreferrer'
+      target='_blank'>
+      <FontAwesomeIcon icon={icon} size='2x' color='#343a40' />
+    </a>
   );
 };
