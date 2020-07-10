@@ -4,7 +4,10 @@ export const Bio = () => {
   return (
     <div className='col-lg-9 text-center text-lg-left text-white lead mt-3'>
       <h1>
-        Hey there, <span className='wave'>👋</span>
+        Hey there,
+        <span role='img' className='ml-1 wave' aria-label='Waving Hand'>
+          👋
+        </span>
       </h1>
       <p className='mx-3'>
         I'm a self taught (well mostly self taught) web developer from Easton

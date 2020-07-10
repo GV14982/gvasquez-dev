@@ -63,7 +63,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className='row justify-content-center my-1 mx-1 overflow-hidden'>
+    <div className='row justify-content-center my-2 mx-1 overflow-hidden'>
       <div
         className={`alert alert-${error ? 'danger' : 'success'} thank ${
           (submitted || error) && 'thank-animation'

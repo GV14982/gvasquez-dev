@@ -47,6 +47,12 @@ body::-webkit-scrollbar-thumb {
   animation: thanks 5s ease-in-out 1;
 }
 
+.scroller {
+  height: 2px;
+  border-radius: 25%;
+  animation: slider 10s ease-in-out infinite;
+}
+
 @keyframes thanks {
   0% {
     margin-top: -15vh;
@@ -65,25 +71,54 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@keyframes rotate {
+@keyframes slider {
   0% {
-    transform: rotate(0deg);
+    background-color: #fd1d1d;
+    width: 0%;
+    margin-left: 0%;
   }
 
-  75% {
-    transform: rotate(0deg);
-  }
-
-  85% {
-    transform: rotate(15deg);
+  90% {
+    background-color: #fd1d1d;
+    width: 0%;
+    margin-left: 0%;
+    opacity: 0;
   }
 
   95% {
-    transform: rotate(-5deg);
+    background-color: #833ab4;
+    width: 100%;
+    margin-left: 0%;
+    opacity: 1;
   }
 
   100% {
-    transform: rotate(0deg);
+    background-color: #fcb045;
+    width: 0%;
+    margin-left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+
+  75% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+
+  85% {
+    transform: rotate(20deg) translate(5px, -10px);
+  }
+
+  95% {
+    transform: rotate(-5deg) translate(-1.25px, 2.5px);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
   }
 }
 

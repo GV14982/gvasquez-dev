@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Bio } from '../Personal/Bio';
 import { Headshot } from '../Personal/Headshot';
 import { Projects } from '../Professional/Projects';
@@ -13,6 +13,7 @@ export const Body = () => {
       <div className='row my-5 text-white text-center'>
         <div className='col-12'>
           <h1>Featured Projects</h1>
+          <div className='scroller'></div>
         </div>
       </div>
       <Projects />
