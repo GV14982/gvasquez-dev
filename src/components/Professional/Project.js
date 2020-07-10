@@ -13,7 +13,7 @@ export const Project = ({
 }) => {
   return (
     <Fragment>
-      <div className='col-12 col-lg'>
+      <div className='col-12 col-lg my-2'>
         <div className='card bg-light'>
           <a href={url} rel='noopener noreferrer' target='_blank'>
             <img
@@ -43,18 +43,16 @@ export const Project = ({
             ))}
           </div>
           <div className='d-flex justify-content-center mb-2'>
-            <SocialLink name='github' url={githubURL} />
-            <a
-              href={url}
-              className='img-thumbnail mx-2 px-2'
-              rel='noopener noreferrer'
-              target='_blank'>
-              <FontAwesomeIcon
-                icon={['fas', 'external-link-square-alt']}
-                size='2x'
-                color='#343a40'
-              />
-            </a>
+            <SocialLink
+              name='github'
+              icon={['fab', 'github-square']}
+              url={githubURL}
+            />
+            <SocialLink
+              name='link to website'
+              icon={['fas', 'external-link-square-alt']}
+              url={'external-link-square-alt'}
+            />
           </div>
         </div>
       </div>

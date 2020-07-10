@@ -9,20 +9,17 @@ export const Footer = () => {
         <SocialLink
           name='github'
           url='https://github.com/gv14982'
-          image='/github.png'
-          nav={true}
+          icon={['fab', 'github-square']}
         />
         <SocialLink
           name='linkedin'
+          icon={['fab', 'linkedin']}
           url='https://ghttps://www.linkedin.com/in/graham-vasquez-79b17a198/ithub.com/gv14982'
-          image='/linkedin.png'
-          nav={true}
         />
         <SocialLink
           name='twitter'
+          icon={['fab', 'twitter-square']}
           url='https://twitter.com/___datboi_'
-          image='/twitter.png'
-          nav={true}
         />
       </div>
     </div>

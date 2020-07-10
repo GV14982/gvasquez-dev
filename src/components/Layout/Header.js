@@ -9,7 +9,7 @@ export const Header = () => {
           src='/GV.png'
           className='mx-1'
           alt='Logo'
-          width='60'
+          width='50'
           loading='lazy'
         />
         Graham Vasquez
@@ -18,17 +18,17 @@ export const Header = () => {
         <SocialLink
           name='github'
           url='https://github.com/gv14982'
-          image='/github.png'
+          icon={['fab', 'github-square']}
         />
         <SocialLink
           name='linkedin'
+          icon={['fab', 'linkedin']}
           url='https://ghttps://www.linkedin.com/in/graham-vasquez-79b17a198/ithub.com/gv14982'
-          image='/linkedin.png'
         />
         <SocialLink
           name='twitter'
+          icon={['fab', 'twitter-square']}
           url='https://twitter.com/___datboi_'
-          image='/twitter.png'
         />
       </div>
     </nav>

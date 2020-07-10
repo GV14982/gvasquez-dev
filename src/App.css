@@ -26,17 +26,34 @@ body::-webkit-scrollbar-thumb {
   animation: rotate 7s ease-in-out infinite;
 }
 
+.btn {
+  transform: scale(1, 1);
+  transition: 200ms;
+}
+
+.btn:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.border-2 {
+  border: #343a40 solid 1.3px;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
 
-  80% {
+  75% {
     transform: rotate(0deg);
   }
 
-  90% {
+  85% {
     transform: rotate(15deg);
+  }
+
+  95% {
+    transform: rotate(-5deg);
   }
 
   100% {
