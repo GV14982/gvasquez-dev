@@ -64,15 +64,15 @@ export const Contact = () => {
 
   return (
     <div className='row justify-content-center my-2 mx-1 overflow-hidden'>
+      <div
+        className={`alert alert-${error ? 'danger' : 'success'} thank ${
+          (submitted || error) && 'thank-animation'
+        }`}>
+        {error
+          ? 'Sorry, it seems like something went wrong. Please try again.'
+          : 'Thank you for reaching out. I will get back to you as soon as I can!'}
+      </div>
       <form className='col-lg-8 card p-3 mb-3' onSubmit={onSubmit}>
-        <div
-          className={`alert alert-${error ? 'danger' : 'success'} thank ${
-            (submitted || error) && 'thank-animation'
-          }`}>
-          {error
-            ? 'Sorry, it seems like something went wrong. Please try again.'
-            : 'Thank you for reaching out. I will get back to you as soon as I can!'}
-        </div>
         <h2>Contact Me!</h2>
         <div className='form-group' onSubmit={(e) => e.preventDefault()}>
           <label htmlFor='name'>
