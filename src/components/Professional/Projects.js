@@ -84,7 +84,7 @@ export const Projects = () => {
           'Express',
           'MongoDB',
         ]}
-        images={['buffs_main.png', 'buffs_dashboard.png']}
+        images={['buffs_main.png']}
         githubURL='https://github.com/ClickPop/buffs'
         url='https://buffs.app'
       />
@@ -93,7 +93,7 @@ export const Projects = () => {
         subtitle='An activity idea generator in the era of social distancing.'
         description={<TTDWTWGCDescription />}
         technologies={['jQuery', 'Bootstrap', 'Node', 'Express', 'AirTable']}
-        images={['ttdwtwgc_main.png', 'ttdwtwgc_idea.png']}
+        images={['ttdwtwgc_main.png']}
         githubURL='https://github.com/ClickPop/quarantine'
         url='https://thingstodowhentheworldgetscanceled.com/'
       />

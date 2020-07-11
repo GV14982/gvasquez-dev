@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .thank {
-  margin-top: -16vh;
+  margin-top: -4.3rem;
 }
 
 .thank-animation {
@@ -49,19 +49,19 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes thanks {
   0% {
-    margin-top: -16vh;
+    margin-top: -4.3rem;
   }
 
   15% {
-    margin-top: 1.3vh;
+    margin-top: 0rem;
   }
 
   85% {
-    margin-top: 1.3vh;
+    margin-top: 0rem;
   }
 
   100% {
-    margin-top: -16vh;
+    margin-top: -4.3rem;
   }
 }
 
