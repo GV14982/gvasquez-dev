@@ -84,7 +84,7 @@ export const Projects = () => {
           'Express',
           'MongoDB',
         ]}
-        images={['buffs_main.png']}
+        images={['buffs_main.jpg']}
         githubURL='https://github.com/ClickPop/buffs'
         url='https://buffs.app'
       />
@@ -93,7 +93,7 @@ export const Projects = () => {
         subtitle='An activity idea generator in the era of social distancing.'
         description={<TTDWTWGCDescription />}
         technologies={['jQuery', 'Bootstrap', 'Node', 'Express', 'AirTable']}
-        images={['ttdwtwgc_main.png']}
+        images={['ttdwtwgc_main.jpg']}
         githubURL='https://github.com/ClickPop/quarantine'
         url='https://thingstodowhentheworldgetscanceled.com/'
       />
@@ -102,7 +102,7 @@ export const Projects = () => {
         subtitle='A daily nudge to say something kind.'
         description={<NiceWordsDescription />}
         technologies={['Node', 'Express', 'Airtable', 'Aweber']}
-        images={['nice_words_main.png']}
+        images={['nice_words_main.jpg']}
         githubURL=''
         url='https://nicewords.email/'
       /> */}

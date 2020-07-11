@@ -1,6 +1,5 @@
-import React, { useState, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { SocialLink } from './SocialLink';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Project = ({
   title,
@@ -18,7 +17,7 @@ export const Project = ({
           <a href={url} rel='noopener noreferrer' target='_blank'>
             <img
               src={images[0]}
-              className='card-img-top border border-dark rounded'
+              className='card-img-top rounded'
               alt={`${title} screenshot`}
             />
           </a>
