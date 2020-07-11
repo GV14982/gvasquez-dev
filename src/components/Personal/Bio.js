@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Bio = () => {
   return (
-    <div className='col-lg-9 text-center text-lg-left text-white lead mt-3'>
+    <div className='col-md-7 col-lg-9 text-center text-md-left text-white lead mt-3'>
       <h1>
         Hey there,
         <span role='img' className='ml-1 wave' aria-label='Waving Hand'>

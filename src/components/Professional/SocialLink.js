@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const SocialLink = ({ name, url, icon }) => {
-  console.log(name);
   return (
     <a
       href={url}

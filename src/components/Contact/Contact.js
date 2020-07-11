@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Airtable from 'airtable';
-var base = new Airtable({ apiKey: process.env.REACT_APP_KEY }).base(
-  'appLytH43z5MMPuPn'
+var base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base(
+  process.env.REACT_APP_AIRTABLE_BASE
 );
 
 const newAirtableRecord = (formState) => {

@@ -17,18 +17,18 @@ export const Header = () => {
       <div className='nav my-2'>
         <SocialLink
           name='github'
-          url='https://github.com/gv14982'
+          url={process.env.REACT_APP_PERSONAL_GITHUB}
           icon={['fab', 'github-square']}
         />
         <SocialLink
           name='linkedin'
           icon={['fab', 'linkedin']}
-          url='https://ghttps://www.linkedin.com/in/graham-vasquez-79b17a198/ithub.com/gv14982'
+          url={process.env.REACT_APP_PERSONAL_LINKEDIN}
         />
         <SocialLink
           name='twitter'
           icon={['fab', 'twitter-square']}
-          url='https://twitter.com/___datboi_'
+          url={process.env.REACT_APP_PERSONAL_TWITTER}
         />
       </div>
     </nav>

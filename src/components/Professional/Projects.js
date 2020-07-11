@@ -85,8 +85,8 @@ export const Projects = () => {
           'MongoDB',
         ]}
         images={['buffs_main.jpg']}
-        githubURL='https://github.com/ClickPop/buffs'
-        url='https://buffs.app'
+        githubURL={process.env.REACT_APP_BUFFS_GITHUB}
+        url={process.env.REACT_APP_BUFFS_URL}
       />
       <Project
         title='Things to do when the world gets cancelled'
@@ -94,8 +94,8 @@ export const Projects = () => {
         description={<TTDWTWGCDescription />}
         technologies={['jQuery', 'Bootstrap', 'Node', 'Express', 'AirTable']}
         images={['ttdwtwgc_main.jpg']}
-        githubURL='https://github.com/ClickPop/quarantine'
-        url='https://thingstodowhentheworldgetscanceled.com/'
+        githubURL={process.env.REACT_APP_TTDWTWGC_GITHUB}
+        url={process.env.REACT_APP_TTDWTWGC_URL}
       />
       {/* <Project
         title='Nice Words'
