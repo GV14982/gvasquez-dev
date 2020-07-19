@@ -1,5 +1,6 @@
 import React from 'react';
 import { SocialLink } from '../Professional/SocialLink';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Header = () => {
   return (
@@ -15,6 +16,9 @@ export const Header = () => {
         Graham Vasquez
       </div>
       <div className='nav my-2'>
+        <a href="#contact" className='btn btn-light border-2 mx-2'>
+          <FontAwesomeIcon icon={['fas', 'envelope-square']} size='2x' color='#343a40' />
+        </a>
         <SocialLink
           name='github'
           url={process.env.REACT_APP_PERSONAL_GITHUB}

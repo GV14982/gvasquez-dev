@@ -6,7 +6,7 @@ import { Body } from './components/Layout/Body';
 import { Footer } from './components/Layout/Footer';
 import { Contact } from './components/Contact/Contact';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkSquareAlt, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithubSquare,
   faLinkedin,
@@ -17,7 +17,8 @@ library.add(
   faGithubSquare,
   faLinkedin,
   faTwitterSquare,
-  faExternalLinkSquareAlt
+  faExternalLinkSquareAlt,
+  faEnvelopeSquare
 );
 
 function App() {
