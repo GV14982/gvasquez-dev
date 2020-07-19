@@ -36,10 +36,6 @@ body::-webkit-scrollbar-thumb {
   transform: scale(1.1, 1.1);
 }
 
-.border-2 {
-  border: #343a40 solid 1.3px;
-}
-
 .thank {
   margin-top: -5rem;
 }
