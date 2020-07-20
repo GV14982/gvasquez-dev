@@ -36,7 +36,7 @@ export const Project = ({
           {description}
           <div className='my-2 mx-3'>
             {technologies.map((technology) => (
-              <span key={technology} className='badge badge-warning p-2 m-1'>
+              <span key={technology} className='badge badge-warning p-2 my-1 ml-1'>
                 {technology}
               </span>
             ))}
