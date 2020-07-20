@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito');
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -8,6 +8,7 @@ body {
   background-color: #343a40;
   scrollbar-width: thin;
   scrollbar-color: #f8f9fa #343a40;
+  font-family: 'Nunito', sans-serif;
 }
 
 body::-webkit-scrollbar-track {
@@ -35,14 +36,18 @@ body::-webkit-scrollbar-thumb {
   transform: scale(1.1, 1.1);
 }
 
-.border-2 {
-  border: #343a40 solid 1.3px;
-}
-
 .thank {
   margin-top: -5rem;
 }
 
+.card-title {
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-style: italic;
+}
+  
 .thank-animation {
   animation: thanks 5s ease-in-out 1;
 }
