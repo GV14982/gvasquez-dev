@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Airtable from 'airtable';
-var base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base(
-  process.env.REACT_APP_AIRTABLE_BASE
+var base = new Airtable({ apiKey: process.env.GATSBY_AIRTABLE_KEY }).base(
+  process.env.GATSBY_AIRTABLE_BASE
 );
 
 const newAirtableRecord = (formState) => {
@@ -63,7 +63,7 @@ export const Contact = () => {
   };
 
   return (
-    <div id="contact" className='row justify-content-center my-2 mx-1 overflow-hidden'>
+    <div className='row justify-content-center my-2 mx-1 overflow-hidden'>
       <div
         className={`alert alert-${error ? 'danger' : 'success'} thank ${
           (submitted || error) && 'thank-animation'

@@ -21,8 +21,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "CI= react-scripts build",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

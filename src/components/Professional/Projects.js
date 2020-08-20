@@ -85,8 +85,8 @@ export const Projects = () => {
           'MongoDB',
         ]}
         images={['buffs_main.jpg']}
-        githubURL={process.env.REACT_APP_BUFFS_GITHUB}
-        url={process.env.REACT_APP_BUFFS_URL}
+        githubURL={process.env.GATSBY_BUFFS_GITHUB}
+        url={process.env.GATSBY_BUFFS_URL}
       />
       <Project
         title='Things to do when the world gets cancelled'
@@ -94,8 +94,8 @@ export const Projects = () => {
         description={<TTDWTWGCDescription />}
         technologies={['jQuery', 'Bootstrap', 'Node', 'Express', 'AirTable']}
         images={['ttdwtwgc_main.jpg']}
-        githubURL={process.env.REACT_APP_TTDWTWGC_GITHUB}
-        url={process.env.REACT_APP_TTDWTWGC_URL}
+        githubURL={process.env.GATSBY_TTDWTWGC_GITHUB}
+        url={process.env.GATSBY_TTDWTWGC_URL}
       />
       {/* <Project
         title='Nice Words'

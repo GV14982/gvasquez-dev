@@ -16,23 +16,27 @@ export const Header = () => {
         Graham Vasquez
       </div>
       <div className='nav my-2'>
-        <a href="#contact" className='btn btn-light border-2 mx-2'>
-          <FontAwesomeIcon icon={['fas', 'envelope-square']} size='2x' color='#343a40' />
+        <a href='#contact' className='btn btn-light border-2 mx-2'>
+          <FontAwesomeIcon
+            icon={['fas', 'envelope-square']}
+            size='2x'
+            color='#343a40'
+          />
         </a>
         <SocialLink
           name='github'
-          url={process.env.REACT_APP_PERSONAL_GITHUB}
+          url={process.env.GATSBY_PERSONAL_GITHUB}
           icon={['fab', 'github-square']}
         />
         <SocialLink
           name='linkedin'
           icon={['fab', 'linkedin']}
-          url={process.env.REACT_APP_PERSONAL_LINKEDIN}
+          url={process.env.GATSBY_PERSONAL_LINKEDIN}
         />
         <SocialLink
           name='twitter'
           icon={['fab', 'twitter-square']}
-          url={process.env.REACT_APP_PERSONAL_TWITTER}
+          url={process.env.GATSBY_PERSONAL_TWITTER}
         />
       </div>
     </nav>
