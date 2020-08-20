@@ -8,18 +8,18 @@ export const Footer = () => {
       <div className='nav'>
         <SocialLink
           name='github'
-          url={process.env.REACT_APP_PERSONAL_GITHUB}
+          url={process.env.GATSBY_PERSONAL_GITHUB}
           icon={['fab', 'github-square']}
         />
         <SocialLink
           name='linkedin'
           icon={['fab', 'linkedin']}
-          url={process.env.REACT_APP_PERSONAL_LINKED}
+          url={process.env.GATSBY_PERSONAL_LINKED}
         />
         <SocialLink
           name='twitter'
           icon={['fab', 'twitter-square']}
-          url={process.env.REACT_APP_PERSONAL_TWITTER}
+          url={process.env.GATSBY_PERSONAL_TWITTER}
         />
       </div>
     </div>
