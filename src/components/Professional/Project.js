@@ -50,7 +50,7 @@ export const Project = ({
             <SocialLink
               name='link to website'
               icon={['fas', 'external-link-square-alt']}
-              url={'external-link-square-alt'}
+              url={url}
             />
           </div>
         </div>
