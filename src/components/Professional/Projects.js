@@ -47,6 +47,23 @@ const TTDWTWGCDescription = () => {
   );
 };
 
+const AsyncAirtable = () => {
+  return (
+    <div className='mx-4'>
+      <p className='card-text'>
+        AsyncAirtable is an opensource project I built to make working with the
+        Airtable API easier. There is an existing JS library, but it is
+        call-back based and I felt like that could be improved. AsyncAirtable is
+        promise based, and also includes some extra features such as Typescript
+        support, an upsert command, and built in pagination.
+      </p>
+      <p className='card-text'>
+        AsyncAirtable is built in Typescript tested with Jest.
+      </p>
+    </div>
+  );
+};
+
 // const NiceWordsDescription = () => {
 //   return (
 //     <div className='mx-4'>
@@ -96,6 +113,15 @@ export const Projects = () => {
         images={['ttdwtwgc_main.jpg']}
         githubURL={process.env.GATSBY_TTDWTWGC_GITHUB}
         url={process.env.GATSBY_TTDWTWGC_URL}
+      />
+      <Project
+        title='AsyncAirtable'
+        subtitle='A library to make working with the Airtable API even easier.'
+        description={<AsyncAirtable />}
+        technologies={['Typescript', 'Jest', 'Node', 'AirTable']}
+        images={['async_airtable.jpg']}
+        githubURL={process.env.GATSBY_ASYNCAIRTABLE_GITHUB}
+        url={process.env.GATSBY_ASYNCAIRTABLE_URL}
       />
       {/* <Project
         title='Nice Words'
