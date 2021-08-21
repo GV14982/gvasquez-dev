@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Graham's Little Internet Corner</title>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div>
+    <div class="swoop">
+      <img src="swoop.svg" aria-hidden="true" alt="gradient swoop">
+      <img src="swoop-bottom.svg" aria-hidden="true" alt="gradient swoop">
+    </div>
+    <main>
+      <div id="home">
+        <div class="hero">
+          <h1>Hi there!<span role="img" aria-label="Hand waving">👋🏻</span></h1>
+          
+          <div class="hero-text">
+            <p>I’m a full-stack engineer from Easton Pennsylvania. I enjoy making products that help people with the creative process, as well as build communities.</p>
+
+            <p>I am currently a web-engineer at Crowdcast, where we are building the platform for people to come together and share ideas via live video.</p>
+
+            <p>My stack of choice is React/Typescript on NextJS or Svelte with SvelteKit. I write a lot of Node, but I also enjoy writing Go.</p>
+          </div>
+          <div class="hero-image">
+            <img class="selfie" src="selfie.webp" alt="A selfie of myself">
+            <div class="icon-row">
+              <a href="http://github.com/gv14982" target="_blank" rel="noopener noreferrer"><img class="icon" src="github.svg" alt="Github icon"></a>
+              <a href="http://linkedin.com/gv14982" target="_blank" rel="noopener noreferrer"><img class="icon" src="linkedin.svg" alt="Linked icon"></a>
+              <a href="http://twitter.com/_datboi____" target="_blank" rel="noopener noreferrer"><img class="icon" src="twitter.svg" alt="Twitter icon"></a>
+              <a href="mailto:graham@gvasquez.dev" target="_blank" rel="noopener noreferrer"><img class="icon" src="email.svg" alt="Email icon"></a>
+            </div>
+          </div>
+        </div>
+        <div class="down-arrow">
+          <a href="#projects">
+            <img tabindex="0" role="button" src="down-arrow.svg" alt="See more arrow" />
+          </a>
+        </div>
+      </div>
+      <div id="projects">
+        <h1>Featured Projects</h1>
+        <div class="wrapper">
+          <div class="project-carousel">
+            <div class="project-card">
+              <div>
+                <img style="width: 40%;" src="backtalk-logo.svg" alt="Backtalk logo" />
+              <div class="project-card-body">
+                <h2>Backtalk</h2>
+                <p>Backtalk is a conversation survey application we built to ease some pain points we had with Typeform. It provides an easy to use interface to create surveys, as well as an option to pass in query params to act as additional questions/answers.</p>
+
+                <p>Backtalk is built on two repos. The backend is written with NodeJS and Express, and deployed on AWS with the Serverless Framework. The database is a managed CockroachDB cluster. The frontend is written in React and deployed on Netlify.</p>
+              </div>
+              </div>
+              <div class="project-tags">
+                <span class="tag" data-tag="backend">
+                  Node
+                </span>
+                <span class="tag" data-tag="backend">
+                  Express
+                </span>
+                <span class="tag" data-tag="service">
+                  Serverless Framework
+                </span>
+                <span class="tag" data-tag="service">
+                  CockroachDB
+                </span>
+                <span class="tag" data-tag="frontend">
+                  React
+                </span>
+              </div>
+            </div>
+            <div class="project-card">
+              <div>
+                <img style="width: 60%;" src="ff-logo.svg" alt="Friendl Faces logo" />
+              <div class="project-card-body">
+                <h2>Friendly Faces</h2>
+                <p>Friendly Faces is an inclusive avatar generator. We wanted to a build a tool that both developers and users alike would find both fun and useful. The API allows your to make calls to get friendly faces in a number of ways, including completely random, via a seed, and with specific pieces. Our little generator allows users to mess with the various pieces and find the friendly face that expresses who they are!</p>
+
+                <p>The API is written in Go, and the front end is NextJS+Typescript and TailwindCSS. We use Firebase for user authentication and object storage, as well as a couple cloud functions</p>
+              </div>
+              </div>
+              <div class="project-tags">
+                <span class="tag" data-tag="backend">
+                  Golang
+                </span>
+                <span class="tag" data-tag="service">
+                  Firebase
+                </span>
+                <span class="tag" data-tag="frontend">
+                  Nextjs
+                </span>
+                <span class="tag" data-tag="frontend">
+                  Typescript
+                </span>
+                <span class="tag" data-tag="frontend">
+                  TailwindCSS
+                </span>
+              </div>
+            </div>
+            <div class="project-card">
+              <div>
+                <img style="width: 90%;" src="ttdwtwgc-logo.svg" alt="TTDWTWGC logo" />
+                <div class="project-card-body">
+                  <h2>TTDWTWGC</h2>
+                  <p>Things to Do When the World gets Canceled (TTDWTWGC) is a digital idea book in a time of social distancing. We built this in the early stages of the COVID-19 pandemic, and we were just bored and wanted ideas! This was a fun way for us to share our ideas with people all over the world, and try some of theirs as well!</p>
+                  <p>TTDWTWGC is built on Node and Express, and we use Airtable as a datastore. The front end is Bootstrap and jQuery.</p>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="tag" data-tag="backend">
+                  Node
+                </span>
+                <span class="tag" data-tag="backend">
+                  Express
+                </span>
+                <span class="tag" data-tag="service">
+                  Airtable
+                </span>
+                <span class="tag" data-tag="frontend">
+                  Bootstrap
+                </span>
+                <span class="tag" data-tag="frontend">
+                  jQuery
+                </span>
+              </div>
+            </div>
+            <div class="project-card">
+              <div>
+                <img style="width: 40%;" src="backtalk-logo.svg" alt="Backtalk logo" />
+                <div class="project-card-body">
+                  <h2>Async Airtable</h2>
+                  <p>AsyncAirtable is an opensource project I built to make working with the Airtable API easier. There is an existing JS library, but when I built this, it was call-back based and I felt like that could be improved. AsyncAirtable is promise based, and also includes some extra features such as an upsert command, built in pagination, and a query builder.</p>
+                  <p>AsyncAirtable is built in Typescript tested with Jest.</p>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="tag" data-tag="backend">
+                  Node
+                </span>
+                <span class="tag" data-tag="backend">
+                  Typescript
+                </span>
+                <span class="tag" data-tag="service">
+                  Airtable
+                </span>
+                <span class="tag" data-tag="service">
+                  Jest
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="down-arrow">
+          <a href="#skills">
+            <img tabindex="0" role="button" src="down-arrow.svg" alt="See more arrow" />
+          </a>
+        </div>
+      </div>
+      <div id="skills">
+        <h1>Skills</h1>
+        <div class="skills-type-selector">
+          <div tabindex="0" role="button" data-selected>Frontend</div>
+          <div tabindex="0" role="button">Backend</div>
+          <div tabindex="0" role="button">Tools</div>
+          <span aria-hidden="" id="btn-bg" />
+        </div>
+        <div class="wrapper">
+          <div class="skills-icons">
+          <div class="skills" id="frontend">
+            <div class="grid frontend">
+              <div>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" data-name="HTML">
+                  <img src="html-logo.svg" alt="HTML5 logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" data-name="CSS">
+                  <img src="css-logo.svg" alt="CSS3 logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" data-name="Javascript">
+                  <img src="javascript-logo.svg" alt="Javascript logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://www.typescriptlang.org/" data-name="Typescript">
+                  <img src="typescript-logo.svg" alt="Typescript logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://reactjs.org/" data-name="React">
+                  <img src="react-logo.svg" alt="React logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://svelte.dev/" data-name="Svelte">
+                  <img src="svelte-logo.svg" alt="Svelte logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://nextjs.org/" data-name="NextJS">
+                  <img src="nextjs-logo.svg" alt="NextJS logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://tailwindcss.com/" data-name="TailwindCSS">
+                  <img src="tailwindcss-logo.svg" alt="TailwindCSS logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://chakra-ui.com/" data-name="Chakra UI">
+                  <img src="chakra-ui-logo.svg" alt="Chakra UI logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://sass-lang.com/" data-name="Sass">
+                  <img src="sass-logo.svg" alt="Sass logo">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="skills" id="backend">
+            <div class="grid backend">
+              <div>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" data-name="Javascript">
+                  <img src="javascript-logo.svg" alt="Javascript logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://www.typescriptlang.org/" data-name="Typescript">
+                  <img src="typescript-logo.svg" alt="Typescript logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://nodejs.org/en/" data-name="NodeJS">
+                  <img src="nodejs-logo.svg" alt="NodeJS logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://golang.org/" data-name="Golang">
+                  <img src="go-logo.svg" alt="Golang logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://www.postgresql.org/" data-name="Postgres">
+                  <img src="postgres-logo.svg" alt="Postgres logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://www.mongodb.com/" data-name="MongoDB">
+                  <img src="mongodb-logo.svg" alt="MongoDB logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://graphql.org/" data-name="GraphQL">
+                  <img src="graphql-logo.svg" alt="GraphQL logo">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="skills" id="tools">
+            <div class="grid tools">
+              <div>
+                <a href="https://git-scm.com/" data-name="Git">
+                  <img src="git-logo.svg" alt="Git logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://ohmyz.sh/" data-name="Shell (Bash/Zsh)">
+                  <img src="bash-logo.svg" alt="Bash logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://github.com/" data-name="Github">
+                  <img src="github-logo.svg" alt="Github logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://code.visualstudio.com/" data-name="VS Code">
+                  <img src="vscode-logo.svg" alt="VS Code logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://aws.amazon.com/" data-name="AWS">
+                  <img src="aws-logo.svg" alt="AWS logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://cloud.google.com/" data-name="GCP">
+                  <img src="gcp-logo.svg" alt="GCP logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://hasura.io/" data-name="Hasura">
+                  <img src="hasura-logo.svg" alt="Hasura logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://airtable.com/" data-name="Airtable">
+                  <img src="airtable-logo.svg" alt="Airtable logo">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
