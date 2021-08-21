@@ -23,17 +23,14 @@ const calcStyles = (btnBg, currBtn, skillSlider, btns) => {
     }
 };
 document.addEventListener('readystatechange', () => {
-    var _a, _b;
+    var _a;
     if (document.readyState === 'complete') {
         const btnBG = document.getElementById('btn-bg');
         const btnGroup = document.querySelector('.skills-type-selector');
         const btns = Array.from((_a = btnGroup === null || btnGroup === void 0 ? void 0 : btnGroup.children) !== null && _a !== void 0 ? _a : []);
-        const skills = Array.from((_b = document.querySelectorAll('.grid')) !== null && _b !== void 0 ? _b : []);
         const skillSlider = document.querySelector('.skills-icons');
         let currBtn = document.querySelector('[data-selected]');
         let btnIndex = 0;
-        let touch = 0;
-        let swipe = null;
         if (btnBG && currBtn && skillSlider && btns) {
             calcStyles(btnBG, currBtn, skillSlider, btns);
         }
@@ -58,104 +55,12 @@ document.addEventListener('readystatechange', () => {
         });
         btns.forEach(b => {
             b.addEventListener('keyup', (e) => {
-                if (e.keyCode === 32) {
+                if (e.key === 'Space') {
                     btns.forEach(bt => {
                         bt.removeAttribute('data-selected');
                     });
                     b.toggleAttribute('data-selected');
                     currBtn = b;
-                    if (btnBG && currBtn && skillSlider && btns) {
-                        calcStyles(btnBG, currBtn, skillSlider, btns);
-                    }
-                    ;
-                }
-            });
-        });
-        btnGroup.addEventListener('touchstart', e => {
-            touch = e.targetTouches[0].clientY;
-        });
-        btnGroup.addEventListener('touchmove', e => {
-            e.preventDefault();
-            if (e.targetTouches[0].clientY < touch - 50) {
-                swipe = "up";
-                return;
-            }
-            else if (e.targetTouches[0].clientY > touch + 50) {
-                swipe = "down";
-                return;
-            }
-            swipe = null;
-        });
-        btnGroup.addEventListener('touchend', () => {
-            if (swipe === 'up') {
-                btns.forEach(bt => {
-                    bt.removeAttribute('data-selected');
-                });
-                if (btnIndex < btns.length - 1) {
-                    btnIndex++;
-                    currBtn = btns[btnIndex];
-                }
-                currBtn.toggleAttribute('data-selected');
-                if (btnBG && currBtn && skillSlider && btns) {
-                    calcStyles(btnBG, currBtn, skillSlider, btns);
-                }
-                ;
-            }
-            else if (swipe === 'down') {
-                btns.forEach(bt => {
-                    bt.removeAttribute('data-selected');
-                });
-                if (btnIndex > 0) {
-                    btnIndex--;
-                    currBtn = btns[btnIndex];
-                }
-                currBtn.toggleAttribute('data-selected');
-                if (btnBG && currBtn && skillSlider && btns) {
-                    calcStyles(btnBG, currBtn, skillSlider, btns);
-                }
-                ;
-            }
-        });
-        skills.forEach(skillSet => {
-            skillSet.addEventListener('touchstart', e => {
-                touch = e.targetTouches[0].clientY;
-            });
-            skillSet.addEventListener('touchmove', e => {
-                e.preventDefault();
-                if (e.targetTouches[0].clientY < touch - 50) {
-                    swipe = "up";
-                    return;
-                }
-                else if (e.targetTouches[0].clientY > touch + 50) {
-                    swipe = "down";
-                    return;
-                }
-                swipe = null;
-            });
-            skillSet.addEventListener('touchend', () => {
-                if (swipe === 'up') {
-                    btns.forEach(bt => {
-                        bt.removeAttribute('data-selected');
-                    });
-                    if (btnIndex < btns.length - 1) {
-                        btnIndex++;
-                        currBtn = btns[btnIndex];
-                    }
-                    currBtn.toggleAttribute('data-selected');
-                    if (btnBG && currBtn && skillSlider && btns) {
-                        calcStyles(btnBG, currBtn, skillSlider, btns);
-                    }
-                    ;
-                }
-                else if (swipe === 'down') {
-                    btns.forEach(bt => {
-                        bt.removeAttribute('data-selected');
-                    });
-                    if (btnIndex > 0) {
-                        btnIndex--;
-                        currBtn = btns[btnIndex];
-                    }
-                    currBtn.toggleAttribute('data-selected');
                     if (btnBG && currBtn && skillSlider && btns) {
                         calcStyles(btnBG, currBtn, skillSlider, btns);
                     }
