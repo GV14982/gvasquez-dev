@@ -6,12 +6,14 @@
   "author": "Graham Vasquez <rescus1221@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^6.2.1",
     "sass": "^1.37.5",
     "typescript": "^4.3.5"
   },
   "scripts": {
     "compile": "yarn compile-styles && yarn compile-ts",
     "compile-styles": "sass ./scss/_main.scss ./public/style.css",
-    "compile-ts": "tsc"
+    "compile-ts": "tsc",
+    "dev": "concurrently \"yarn compile-ts --watch\" \"yarn compile-styles --watch\""
   }
 }
