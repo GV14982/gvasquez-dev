@@ -52,7 +52,53 @@ body {
     font-weight: 700;
 
     span {
-      margin-left: 1ch;
+      display: inline-block;
+      width: fit-content;
+      margin-left: 0.5rem;
+      animation: 8s ease 3s infinite running wave;
+      transform-origin: bottom right;
+
+      @keyframes wave {
+        0% {
+          transform: rotate(0deg);
+        }
+        
+        10% {
+          transform: rotate(40deg);
+        }
+
+        12% {
+          transform: rotate(60deg);
+        }
+        
+        15% {
+          transform: rotate(20deg);
+        }
+        
+        18% {
+          transform: rotate(60deg);
+        }
+        
+        20% {
+          transform: rotate(20deg);
+        }
+        
+        23% {
+          transform: rotate(60deg);
+        }
+
+        25% {
+          transform: rotate(20deg);
+        }
+        
+        30% {
+          transform: rotate(20deg);
+        }
+        
+        40% {
+          transform: rotate(0deg);
+        }
+      }
     }
   }
 
