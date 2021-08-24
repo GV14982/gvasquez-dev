@@ -290,6 +290,15 @@ body {
     display: flex;
     flex-direction: column-reverse;
 
+    img {
+      margin: 0 auto;
+      background: #fff;
+      width: 100px;
+      height: auto;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+
     h1 {
       font-size: 1.75rem;
     }
@@ -476,7 +485,7 @@ body {
       flex-direction: column-reverse;
 
       h1 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         margin: 0;
       }
     }
