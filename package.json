@@ -1,19 +1,22 @@
 {
   "name": "gvasquez-dev",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/GV14982/gvasquez-dev.git",
-  "author": "Graham Vasquez <rescus1221@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "concurrently": "^6.2.1",
-    "sass": "^1.37.5",
-    "typescript": "^4.3.5"
-  },
+  "version": "2.0.0",
+  "type": "module",
   "scripts": {
-    "compile": "yarn compile-styles && yarn compile-ts",
-    "compile-styles": "sass ./scss/_main.scss ./public/style.css",
-    "compile-ts": "tsc",
-    "dev": "concurrently \"yarn compile-ts --watch\" \"yarn compile-styles --watch\""
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-markdown": "^2.2.0"
+  },
+  "dependencies": {
+    "@picocss/pico": "^2.0.6",
+    "effect": "^3.8.3",
+    "mime": "^4.0.6",
+    "sass": "^1.79.3",
+    "xterminal": "^2.1.9"
   }
 }
