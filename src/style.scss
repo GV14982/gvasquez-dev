@@ -1,0 +1,27 @@
+@use "@picocss/pico";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  /* prevent page from scrolling */
+}
+
+#app {
+  height: 100vh;
+  /* occur the entire page */
+}
+
+img {
+  width: clamp(100px, 80%, 400px);
+}
+
+object[class="pdf"] {
+  width: clamp(80%, 80%, 700px);
+  height: 100dvh;
+}
