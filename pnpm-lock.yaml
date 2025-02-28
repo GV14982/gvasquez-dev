@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@catppuccin/palette':
+        specifier: ^1.7.1
+        version: 1.7.1
       '@picocss/pico':
         specifier: ^2.0.6
         version: 2.0.6
+      '@xterm/xterm':
+        specifier: ^5.5.0
+        version: 5.5.0
       effect:
         specifier: ^3.8.3
         version: 3.8.3
@@ -35,6 +41,9 @@ importers:
         version: 2.2.0(vite@5.2.11(sass@1.79.3))
 
 packages:
+
+  '@catppuccin/palette@1.7.1':
+    resolution: {integrity: sha512-aRc1tbzrevOTV7nFTT9SRdF26w/MIwT4Jwt4fDMc9itRZUDXCuEDBLyz4TQMlqO9ZP8mf5Hu4Jr6D03NLFc6Gw==}
 
   '@esbuild/aix-ppc64@0.20.2':
     resolution: {integrity: sha512-D+EBOJHXdNZcLJRBkhENNG8Wji2kgc9AZ9KiPr1JuZjsNtyHzrsfLRrY0tk2H2aoFu6RANO1y1iPPUCDYWkb5g==}
@@ -261,6 +270,9 @@ packages:
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
+  '@xterm/xterm@5.5.0':
+    resolution: {integrity: sha512-hqJHYaQb5OptNunnyAnkHyM8aCjZ1MEIDTQu1iIbbTD/xops91NB5yq1ZK/dC2JDbVWtF23zUtl9JE2NqwT87A==}
+
   argparse@1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
 
@@ -416,6 +428,8 @@ packages:
 
 snapshots:
 
+  '@catppuccin/palette@1.7.1': {}
+
   '@esbuild/aix-ppc64@0.20.2':
     optional: true
 
@@ -536,6 +550,8 @@ snapshots:
     optional: true
 
   '@types/estree@1.0.5': {}
+
+  '@xterm/xterm@5.5.0': {}
 
   argparse@1.0.10:
     dependencies:

@@ -2,6 +2,7 @@ import { html as connectMd } from "./markdown/connect.md"
 import { html as aboutMd } from "./markdown/about.md"
 import { html as gleamGraphqlMd } from "./markdown/gleam-graphql.md"
 import { html as forkdMd } from "./markdown/forkd.md"
+import { html as phlaskMd } from "./markdown/phlask.md"
 import mime from "mime";
 
 export class File {
@@ -113,5 +114,6 @@ export const root = new Directory("")
   .touch("connect.md", connectMd, false)
   .mkdir("projects", false, [
     new File("forkd.md", forkdMd, false),
+    new File("phlask.md", phlaskMd, false),
     new File("gleam-graphql.md", gleamGraphqlMd, false),
   ]);

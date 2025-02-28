@@ -1,17 +1,9 @@
+import "@xterm/xterm/css/xterm.css";
 import "xterminal/dist/xterminal.css";
 import XTerminal from "xterminal";
 import { root, Directory } from "./filesystem"
-
-const asciiWelcom = `
-888       888        888
-888   o   888        888
-888  d8b  888        888
-888 d888b 888 .d88b. 888 .d8888b .d88b. 88888b.d88b.  .d88b.
-888d88888b888d8P  Y8b888d88P"   d88""88b888 "888 "88bd8P  Y8b
-88888P Y8888888888888888888     888  888888  888  88888888888
-8888P   Y8888Y8b.    888Y88b.   Y88..88P888  888  888Y8b.
-888P     Y888 "Y8888 888 "Y8888P "Y88P" 888  888  888 "Y8888
-`
+import welcome from "./welcome.txt?raw"
+import welcomeSmall from "./welcome-small.txt?raw"
 
 const helpText = `Here are the supported commands:
 
@@ -51,7 +43,11 @@ class Shell {
       }
       return ["help", "ls", "cd", "clear", "pwd", "cat"].filter(c => c.startsWith(input)).pop() ?? ""
     })
-    this.term.writeln(asciiWelcom)
+    if (window.innerWidth >= 727) {
+      this.term.writeln(welcome)
+    } else {
+      this.term.writeln(welcomeSmall)
+    }
     this.term.writeln(helpText)
     this.term.write(this.prompt);
     this.term.on("data", this.runCmd.bind(this));
@@ -161,6 +157,8 @@ class Shell {
             break;
           case 'application/pdf':
             return this.writeln(`<object class="pdf" data="${file.contents}"></object>`)
+          case 'text/markdown':
+            return this.write(`<div class="markdown">${file.contents}</div>`)
           default:
             return this.writeln(file.contents)
         }

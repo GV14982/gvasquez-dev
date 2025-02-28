@@ -8,3 +8,7 @@ declare module '*.md' {
   // Modify below per your usage
   export { attributes, html };
 }
+
+declare module '*.txt?raw' {
+  export { default }
+}

@@ -13,7 +13,9 @@
     "vite-plugin-markdown": "^2.2.0"
   },
   "dependencies": {
+    "@catppuccin/palette": "^1.7.1",
     "@picocss/pico": "^2.0.6",
+    "@xterm/xterm": "^5.5.0",
     "effect": "^3.8.3",
     "mime": "^4.0.6",
     "sass": "^1.79.3",
