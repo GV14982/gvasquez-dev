@@ -26,6 +26,9 @@ importers:
       sass:
         specifier: ^1.79.3
         version: 1.79.3
+      terminal.css:
+        specifier: ^0.7.5
+        version: 0.7.5
       xterminal:
         specifier: ^2.1.9
         version: 2.1.9
@@ -381,6 +384,9 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
+  terminal.css@0.7.5:
+    resolution: {integrity: sha512-M4RU7IRzqSZoJNRZCmxbRJqjxZqP2eV5cWyUlfAwqJx2GkoHlakTyoPLj0tLJwVJurfac38MwL5Mpwr23Yb0ow==}
+
   typescript@5.4.5:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
@@ -695,6 +701,8 @@ snapshots:
   source-map-js@1.2.0: {}
 
   sprintf-js@1.0.3: {}
+
+  terminal.css@0.7.5: {}
 
   typescript@5.4.5: {}
 

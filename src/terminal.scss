@@ -1,0 +1,51 @@
+@use "src/macchiato.scss";
+
+:root {
+  --xt-bg: #{macchiato.$crust} !important;
+  --xt-fg: #{macchiato.$text} !important;
+  --xt-font-family: "FiraCode Nerd Font Mono";
+  --xt-font-size: 16px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#app {
+  height: 100dvh;
+  /* occur the entire page */
+}
+
+img {
+  width: clamp(100px, 80%, 400px);
+}
+
+object[class="pdf"] {
+  width: clamp(80%, 80%, 700px);
+  height: 100dvh;
+}
+
+.markdown {
+  margin: 0.5rem;
+  padding: 1rem;
+  h1 {
+    color: macchiato.$red;
+  }
+
+  h2 {
+    color: macchiato.$peach;
+  }
+
+  p {
+    color: macchiato.$lavender;
+  }
+
+  a {
+    color: macchiato.$sapphire;
+  }
+
+  background-color: macchiato.$mantle;
+}

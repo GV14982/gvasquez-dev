@@ -19,6 +19,7 @@
     "effect": "^3.8.3",
     "mime": "^4.0.6",
     "sass": "^1.79.3",
+    "terminal.css": "^0.7.5",
     "xterminal": "^2.1.9"
   }
 }

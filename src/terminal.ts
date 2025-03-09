@@ -1,19 +1,22 @@
 import "@xterm/xterm/css/xterm.css";
 import "xterminal/dist/xterminal.css";
+import "./terminal.scss"
 import XTerminal from "xterminal";
 import { root, Directory } from "./filesystem"
 import welcome from "./welcome.txt?raw"
 import welcomeSmall from "./welcome-small.txt?raw"
 
 const helpText = `Here are the supported commands:
-
+- welcome: display the welcome message
 - help: display this message
 - ls: list files and directories at the current directory
 - cd: change directory to a specified path
 - clear: clears the screen
 - pwd: get the current directory
 - cat: display the contents of a file at the specified path
-`
+- exit: return to the main page`
+
+const welcomeText = window.innerWidth >= 727 ? welcome : welcomeSmall;
 
 class Shell {
   currentDir: Directory;
@@ -41,17 +44,14 @@ class Shell {
         }, [] as string[]).pop() ?? ""
         return `${cmd} ${arg}`
       }
-      return ["help", "ls", "cd", "clear", "pwd", "cat"].filter(c => c.startsWith(input)).pop() ?? ""
+      return ["help", "welcome", "ls", "cd", "clear", "pwd", "cat", "exit"].filter(c => c.startsWith(input)).pop() ?? ""
     })
-    if (window.innerWidth >= 727) {
-      this.term.writeln(welcome)
-    } else {
-      this.term.writeln(welcomeSmall)
-    }
+    this.term.write(welcomeText)
     this.term.writeln(helpText)
     this.term.write(this.prompt);
     this.term.on("data", this.runCmd.bind(this));
     this.currentDir = root;
+    this.term.focus()
   }
 
   private async write(input: string): Promise<void> {
@@ -90,6 +90,12 @@ class Shell {
         break;
       case "help":
         await this.writeln(helpText)
+        break;
+      case "welcome":
+        await this.writeln(welcomeText)
+        break;
+      case "exit":
+        window.location.pathname = ""
         break;
       default:
         this.writeln(`Unknown command: ${input.split(" ")[0]}`);
@@ -158,7 +164,7 @@ class Shell {
           case 'application/pdf':
             return this.writeln(`<object class="pdf" data="${file.contents}"></object>`)
           case 'text/markdown':
-            return this.write(`<div class="markdown">${file.contents}</div>`)
+            return this.write(`<div class="markdown">${file.contents.replaceAll("\n", "")}</div>`)
           default:
             return this.writeln(file.contents)
         }
