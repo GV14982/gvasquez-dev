@@ -1,8 +1,9 @@
-import { html as connectMd } from "./markdown/connect.md"
-import { html as aboutMd } from "./markdown/about.md"
-import { html as gleamGraphqlMd } from "./markdown/gleam-graphql.md"
-import { html as forkdMd } from "./markdown/forkd.md"
-import { html as phlaskMd } from "./markdown/phlask.md"
+import { rawContent as connectMd } from "./markdown/connect.md";
+import { rawContent as aboutMd } from "./markdown/about.md";
+import { rawContent as gleamGraphqlMd } from "./markdown/gleam-graphql.md";
+import { rawContent as forkdMd } from "./markdown/forkd.md";
+import { rawContent as phlaskMd } from "./markdown/phlask.md";
+import pdf from "../assets/resume.pdf";
 import mime from "mime";
 
 export class File {
@@ -109,11 +110,11 @@ export class Directory {
   }
 }
 export const root = new Directory("")
-  .touch("about.md", aboutMd, false)
-  .touch("resume.pdf", "/resume.pdf", false)
-  .touch("connect.md", connectMd, false)
+  .touch("about.md", aboutMd(), false)
+  .touch("resume.pdf", pdf, false)
+  .touch("connect.md", connectMd(), false)
   .mkdir("projects", false, [
-    new File("forkd.md", forkdMd, false),
-    new File("phlask.md", phlaskMd, false),
-    new File("gleam-graphql.md", gleamGraphqlMd, false),
+    new File("forkd.md", forkdMd(), false),
+    new File("phlask.md", phlaskMd(), false),
+    new File("gleam-graphql.md", gleamGraphqlMd(), false),
   ]);

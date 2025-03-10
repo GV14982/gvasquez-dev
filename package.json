@@ -1,25 +1,24 @@
 {
-  "name": "gvasquez-dev",
-  "version": "2.0.0",
+  "name": "gvasquez.dev",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0",
-    "vite-plugin-markdown": "^2.2.0"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@catppuccin/palette": "^1.7.1",
-    "@picocss/pico": "^2.0.6",
     "@xterm/xterm": "^5.5.0",
-    "effect": "^3.8.3",
+    "astro": "^5.4.2",
+    "marked": "^15.0.7",
     "mime": "^4.0.6",
-    "sass": "^1.79.3",
+    "sass": "^1.85.1",
+    "sharp": "^0.33.5",
     "terminal.css": "^0.7.5",
-    "xterminal": "^2.1.9"
+    "xterminal": "^2.1.11"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
   }
 }

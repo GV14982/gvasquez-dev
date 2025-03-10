@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Index.astro';
+import { Image } from "astro:assets";
+import photo from "../assets/photo.jpg";
+import resume from "../assets/resume.pdf";
+import "terminal.css";
+---
+
+<Layout>
+    <div class="terminal-nav">
+      <div class="terminal-logo">
+        <div class="logo terminal-prompt">
+          <a href="/#" id="open-term">gvasquez.dev</a>
+        </div>
+      </div>
+      <nav class="terminal-menu">
+        <ul>
+          <li>
+            <a class="menu-item" href={resume} target="_blank">resume</a>
+          </li>
+          <li>
+            <a class="menu-item" href="https://github.com/gv14982" target="_blank">github</a>
+          </li>
+          <li>
+            <a class="menu-item" href="https://www.linkedin.com/in/graham-vasquez/" target="_blank">linkedin</a>
+          </li>
+          <li>
+            <a class="menu-item" href="mailto:graham@gvasquez.dev" target="_blank">email me</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <div class="flex">
+        <figure>
+          <Image class="photo" src={photo} alt="Photo of me and my cat, Fritzy" />
+          <figcaption>Me and my cat, Fritzy</figcaption>
+        </figure>
+        <div class="info">
+        <div class="about">
+          <h2>aboutMe :=</h2>
+          <p>I'm a software engineer from Philadelphia (<b>Go birds</b> 🦅) with a love of building things that make people's lives <em>easier</em>. I've primarly worked in the web world, from crafting CSS to managing deployments in kubernetes. I definitely lean towards the backend, but I like to be flexible and help where it's needed.</p>
+          <p>In my free time I enjoy boardgames (My current favorite is the <a href="https://contentiongames.com/games/slay/" target="_blank">Slay the Spire Boardgame</a>) and playing my guitar. I also have a love of mechanical keyboards (Linear switches are where it's at)</p>
+          <p>The picture is of me and my cat Fritzy. He followed me home and is the sweetest little man I know.</p>
+        </div>
+        <div class="projects">
+          <h2>currentProjects :=</h2>
+          <div class="flex">
+            <div class="terminal-card">
+              <header>
+                  <h3>PHLask</h3>
+              </header>
+              <div>
+                <a href="https://beta.phlask.me" target="_blank">PHLask</a> is an application that aims to make finding free resources easier. We are almost finished with our v2 application that will allow for people to search for water, foraging, food, and clothing
+              </div>
+            </div>
+            <div class="terminal-card">
+              <header>
+                  <h3>Forkd</h3>
+              </header>
+              <div>
+                Forkd is a collaborative recipe application that aims to be “Github for cooking”. All recipes are made up of one or more revisions. Users can “fork” another recipe at a particular revision, which will save a copy to their account. That allows them to start creating new revisions but still retain the backlink to the “forked” recipe.
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <dialog id="term-dialog">
+        <div class="terminal-card">
+          <header><h4>TERMINAL</h4><button class="btn btn-error" id="close-term"><b>x</b></button></header>
+          <div id="app"></div>
+        </div>
+      </dialog>
+    </main>
+</Layout>
+
+<script>
+  import { Shell } from "../terminal/terminal";
+  const dialog: HTMLDialogElement | null = document.querySelector("#term-dialog");
+  let shell: Shell;
+  function openDialog() {
+    dialog?.showModal();
+    shell = new Shell("app", dialog);
+  }
+
+  function closeDialog() {
+    shell?.unmount();
+    dialog?.close();
+  }
+
+  document.querySelector("#open-term")?.addEventListener("click", openDialog);
+  document.querySelector("#close-term")?.addEventListener("click", closeDialog);
+</script>
+
+<style lang="scss">
+  @use "../assets/macchiato.scss";
+
+  :root {
+    --xt-bg: #{macchiato.$crust} !important;
+    --xt-fg: #{macchiato.$text} !important;
+    --xt-font-family: "FiraCode Nerd Font Mono";
+    --xt-font-size: 16px;
+    --global-font-size: 16px;
+    --background-color: #{macchiato.$base} !important;
+    --font-color: #{macchiato.$text} !important;
+    --invert-font-color: #{macchiato.$crust} !important;
+    --primary-color: #{macchiato.$sapphire} !important;
+    --secondary-color: #{macchiato.$lavender} !important;
+    --error-color: #{macchiato.$red} !important;
+    --progress-bar-background: #{macchiato.$surface2} !important;
+    --progress-bar-fill: #{macchiato.$teal} !important;
+    --code-bg-color: #{macchiato.$surface1} !important;
+  }
+
+  body {
+    padding: 0 1rem;
+  }
+
+  main {
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  #term-dialog {
+    padding: 0;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    width: 98dvw;
+    height: 97dvh;
+    .terminal-card {
+      #app {
+        padding: 0;
+        height: calc(100% - var(--global-line-height) * 2);
+        overflow: scroll;
+      }
+      overflow: hidden;
+      height: 100%;
+      header {
+        width: 100%;
+        height: calc(var(--global-line-height) * 2);
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        button {
+          padding: 0.25rem 0.5rem;
+        }
+      }
+    }
+    object[class="pdf"] {
+      width: clamp(80%, 80%, 700px);
+      height: 100%;
+    }
+  }
+
+  .photo {
+    aspect-ratio: 1 / 1;
+    height: 100%;
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    margin: 0 1rem 0 0 !important;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  h2 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .projects {
+    .flex {
+      .terminal-card {
+        margin: 0 0.5rem;
+        header {
+          h3 {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .projects {
+      .flex {
+        flex-direction: column;
+        .terminal-card {
+          margin: 0.5rem 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    main {
+      max-width: 500px;
+    }
+    .flex {
+      flex-direction: column;
+    }
+    .info {
+      width: 100%;
+    }
+    figure {
+      margin: 0 !important;
+    }
+  }
+</style>
+
+<style is:global lang="scss">
+  @use "../assets/macchiato.scss";
+  .markdown {
+    margin: 0.5rem;
+    padding: 1rem;
+    h1 {
+      color: macchiato.$red;
+    }
+
+    h2 {
+      color: macchiato.$peach;
+    }
+
+    p {
+      color: macchiato.$lavender;
+    }
+
+    a {
+      color: macchiato.$sapphire;
+    }
+
+    img {
+      width: clamp(100px, 80%, 400px) !important;
+      max-width: unset !important;
+    }
+
+    background-color: macchiato.$mantle;
+  }
+</style>
