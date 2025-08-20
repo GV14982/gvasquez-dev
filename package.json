@@ -19,6 +19,7 @@
     "xterminal": "^2.1.11"
   },
   "devDependencies": {
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "wrangler": "^4.30.0"
   }
 }
