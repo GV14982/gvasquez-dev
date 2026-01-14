@@ -41,22 +41,20 @@ import resume from "../assets/resume.pdf";
   /* God this is ugly lol */
   @media screen and (max-width: 650px) {
     .terminal-nav {
+      align-items: flex-start !important;
+      flex-direction: row;
       span {
         margin-top: calc(var(--global-space) * 2) !important;
       }
     }
-    @media (min-width: 480px) {
-      .terminal-nav {
-        align-items: flex-start !important;
+    .terminal-menu {
+      ul {
+        margin-top: calc(var(--global-space) * 2) !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
       }
-      .terminal-menu {
-        ul {
-          flex-direction: column !important;
-          align-items: flex-end !important;
-        }
-        li:last-child {
-          margin-right: 2em !important;
-        }
+      li {
+        margin-right: 2em !important;
       }
     }
   }

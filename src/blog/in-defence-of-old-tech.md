@@ -9,7 +9,7 @@ categories:
 
 I feel like I grew up towards the end of what some might consider the "Golden Age" of the internet. Other's might even say that by the time I registered my first email address, `dogwash7@aol.com` in 2000, the internet had already been enshitified. And of course the newer generations will probably just tell me to "Just put my fries in the bag, Unc" and go back to scrolling TikTok.
 
-I'm in my early 30's now. Not quite Zoomer, not quite Unc (athough I have plenty of nieces and nephews). I was born on the tail end of the Millenial's in the early 90's, and have had the opportunity to experience the internet during its transformation from 1.0 to 2.0 (And 3 or 5 depending on what cryptocurrency you're currently gambling on). Part of me is nostalgic for those early "Web 2.0" times. I remember when I created my Twitter account in 2007 and wanted to show all my friends this cool new website. They all asked why they would use it over Facebook. Conversely, after over two decades in our increasingly online society there are glaring holes in this idealistic connected worldview.
+I'm in my early 30's now. Not quite Zoomer, not quite Unc (although I have plenty of nieces and nephews). I was born on the tail end of the Millenial's in the early 90's, and have had the opportunity to experience the internet during its transformation from 1.0 to 2.0 (And 3 or 5 depending on what cryptocurrency you're currently gambling on). Part of me is nostalgic for those early "Web 2.0" times. I remember when I created my Twitter account in 2007 and wanted to show all my friends this cool new website. They all asked why they would use it over Facebook. Conversely, after over two decades in our increasingly online society there are glaring holes in this idealistic connected worldview.
 
 One of my goals recently has been to reduce my reliance on big tech companies (Not like you can avoid them completely), and revisit older technology and how to utilize it in our modern landscape. I'm really tired of constant data mining, lack of interoperability, and limitations on creativity and expression. I want to outline some of the things I use in my "anti-big tech stack" that I have started using. This isn't an exhaustive list, just a little snapshot of some of the things that I have found most impactful.
 
@@ -44,7 +44,7 @@ Digital calendars are one of those super useful things that have a pretty robust
 
 ## Personal Website
 
-Lastly **_start a personal website_**. I have been getting really inspired by the [IndieWeb](https://indieweb.org) movement. There is this really fun [local meetup](https://iffybooks.net/series/homebrew-website-club/)[^3] that I have attended a couple times. It's been so great to talk to people from all skill levels about what they are currently tinkering with.
+I have been getting really inspired by the [IndieWeb](https://indieweb.org) movement. There is this really fun [local meetup](https://iffybooks.net/series/homebrew-website-club/)[^3] that I have attended a couple times. It's been so great to talk to people from all skill levels about what they are currently tinkering with.
 
 ### Hosting
 
