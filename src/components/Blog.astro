@@ -44,7 +44,7 @@ const categories = await getCollection("categories");
 </div>
 {
   related.length > 0 && (
-    <div class="flex">
+    <div class="categories">
       <h3>Related:</h3>
       {related.map((category) => (
         <Badge
@@ -100,7 +100,8 @@ const categories = await getCollection("categories");
     margin-top: 1rem;
   }
   .categories {
-    h2 {
+    h2,
+    h3 {
       margin-bottom: 0;
     }
   }
