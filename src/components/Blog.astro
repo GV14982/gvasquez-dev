@@ -13,7 +13,7 @@ const categories = await getCollection("categories");
 ---
 
 <h1>Blog</h1>
-<div class="flex">
+<div class="categories">
   {
     category ? (
       <Fragment>
@@ -99,13 +99,9 @@ const categories = await getCollection("categories");
   .terminal-timeline {
     margin-top: 1rem;
   }
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    h2,
-    h3,
-    a {
-      margin: 0.5rem;
+  .categories {
+    h2 {
+      margin-bottom: 0;
     }
   }
 </style>
