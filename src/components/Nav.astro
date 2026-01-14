@@ -36,3 +36,28 @@ import resume from "../assets/resume.pdf";
     </ul>
   </div>
 </nav>
+
+<style is:global>
+  /* God this is ugly lol */
+  @media screen and (max-width: 650px) {
+    .terminal-nav {
+      span {
+        margin-top: calc(var(--global-space) * 2) !important;
+      }
+    }
+    @media (min-width: 480px) {
+      .terminal-nav {
+        align-items: flex-start !important;
+      }
+      .terminal-menu {
+        ul {
+          flex-direction: column !important;
+          align-items: flex-end !important;
+        }
+        li:last-child {
+          margin-right: 2em !important;
+        }
+      }
+    }
+  }
+</style>

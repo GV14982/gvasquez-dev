@@ -59,10 +59,17 @@ const { Content, headings } = await render(post);
     <Content />
   </main>
 </Global>
-<style>
-  .badge {
-    padding: 0.5rem 1rem;
-    font-size: 1.125rem;
-    font-weight: bold;
+<style is:global>
+  .footnotes {
+    ol {
+      counter-reset: footnotes;
+    }
+    li {
+      display: flex;
+    }
+    li::before {
+      content: counters(footnotes, ".") ": ";
+      counter-increment: footnotes;
+    }
   }
 </style>
