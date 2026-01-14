@@ -1,0 +1,107 @@
+---
+import Badge from "./Badge.astro";
+import { getEntries, getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  posts: CollectionEntry<"blog">[];
+  category?: CollectionEntry<"categories">;
+}
+
+const { posts, category } = Astro.props;
+const related = await getEntries(category?.data?.related ?? []);
+const categories = await getCollection("categories");
+---
+
+<h1>Blog</h1>
+<div class="flex">
+  {
+    category ? (
+      <Fragment>
+        <h2>Category:</h2>
+        <Badge
+          color={category.data.color}
+          background={category.data.background}
+          href={`/blog/category/${category.id}`}
+        >
+          {category.data.name}
+        </Badge>
+      </Fragment>
+    ) : (
+      <Fragment>
+        <h2>Categories:</h2>
+        {categories.map((category) => (
+          <Badge
+            color={category.data.color}
+            background={category.data.background}
+            href={`/blog/category/${category.id}`}
+          >
+            {category.data.name}
+          </Badge>
+        ))}
+      </Fragment>
+    )
+  }
+</div>
+{
+  related.length > 0 && (
+    <div class="flex">
+      <h3>Related:</h3>
+      {related.map((category) => (
+        <Badge
+          color={category.data.color}
+          background={category.data.background}
+          href={`/blog/category/${category.id}`}
+        >
+          {category.data.name}
+        </Badge>
+      ))}
+    </div>
+  )
+}
+
+{
+  posts.length > 0 ? (
+    <div class="terminal-timeline">
+      {posts.map((post) => (
+        <a href={`/blog/${post.id}`}>
+          <div class="terminal-card">
+            <header>{post.data.title}</header>
+            <div>
+              <h5>Published on: {post.data.pubDate}</h5>
+              {post.data.summary}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div>
+      <p>
+        <em>No posts</em> :(
+      </p>
+    </div>
+  )
+}
+
+<style>
+  h1 {
+    width: fit-content;
+    border-bottom: 2px solid var(--text);
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .terminal-card {
+    color: var(--font-color);
+  }
+  .terminal-card:hover {
+    text-decoration: underline;
+  }
+  .flex {
+    display: flex;
+    h2,
+    h3,
+    a {
+      margin-right: 1rem;
+    }
+  }
+</style>

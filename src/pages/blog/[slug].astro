@@ -1,0 +1,68 @@
+---
+import Global from "../../layouts/Global.astro";
+import Nav from "../../components/Nav.astro";
+import Badge from "../../components/Badge.astro";
+import { getCollection, getEntries } from "astro:content";
+import { render } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const categories = await getEntries(post.data.categories);
+const { Content, headings } = await render(post);
+---
+
+<Global title={post.data.title}>
+  <main>
+    <Nav />
+    <h1>{post.data.title}</h1>
+    <h3>Published: {post.data.pubDate.toDateString()}</h3>
+    {
+      categories.map((category) => (
+        <Badge
+          color={category.data.color}
+          background={category.data.background}
+          href={`/blog/category/${category.id}`}
+        >
+          {category.data.name}
+        </Badge>
+      ))
+    }
+    <ol class="terminal-toc">
+      {
+        headings.map((h) => (
+          <li>
+            <a href={`/blog/${post.id}#${h.slug}`}>{h.text}</a>
+          </li>
+        ))
+      }
+    </ol>
+    {
+      post.data.editedDates.length > 0 && (
+        <ul>
+          {post.data.editedDates.map((d) => (
+            <li>Edited on: {d.toDateString()}</li>
+          ))}
+        </ul>
+      )
+    }
+    <Content />
+  </main>
+</Global>
+<style>
+  .badge {
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+</style>

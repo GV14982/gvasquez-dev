@@ -1,0 +1,7 @@
+{
+  "$schema": "../../.astro/collections/categories.schema.json",
+  "name": "Ethics",
+  "background": "--maroon",
+  "color": "--surface0",
+  "related": []
+}

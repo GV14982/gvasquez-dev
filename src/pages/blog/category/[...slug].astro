@@ -1,0 +1,37 @@
+---
+import Nav from "../../../components/Nav.astro";
+import Layout from "../../../layouts/Global.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import Blog from "../../../components/Blog.astro";
+interface Props {
+  posts: CollectionEntry<"blog">[];
+  category: CollectionEntry<"categories">;
+}
+
+export async function getStaticPaths() {
+  const categories = await getCollection("categories");
+  return Promise.all(
+    categories.map(async (category) => {
+      const posts = await getCollection("blog").then((posts) =>
+        posts
+          .filter((p) => p.data.categories.some((c) => c.id == category.id))
+          .sort((a, b) => a.data.pubDate.getTime() - b.data.pubDate.getTime()),
+      );
+      return {
+        params: { slug: category.id },
+        props: { posts, category },
+      };
+    }),
+  );
+}
+
+const { posts, category } = Astro.props;
+---
+
+<Layout title="Graham's lil blog">
+  <main>
+    <Nav />
+    <Blog posts={posts} category={category} />
+  </main>
+</Layout>

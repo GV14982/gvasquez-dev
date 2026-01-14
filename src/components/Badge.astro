@@ -1,0 +1,32 @@
+---
+interface Props {
+  color: string;
+  background: string;
+  href: string;
+}
+
+const { color, background, href } = Astro.props;
+---
+
+<span>
+  <a
+    href={href}
+    class="badge"
+    style={`background-color: var(${background}); color: var(${color})`}
+  >
+    <slot />
+  </a>
+</span>
+<style>
+  span {
+    display: block;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .badge {
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+</style>

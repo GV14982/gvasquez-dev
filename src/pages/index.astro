@@ -1,87 +1,94 @@
 ---
-import Layout from '../layouts/Index.astro';
+import Layout from "../layouts/Global.astro";
+import Nav from "../components/Nav.astro";
 import { Image } from "astro:assets";
 import photo from "../assets/photo.jpg";
-import resume from "../assets/resume.pdf";
-import "terminal.css";
 ---
 
-<Layout>
-    <div class="terminal-nav">
-      <div class="terminal-logo">
-        <div class="logo terminal-prompt">
-          <a href="/#" id="open-term">gvasquez.dev</a>
-        </div>
-      </div>
-      <nav class="terminal-menu">
-        <ul>
-          <li>
-            <a class="menu-item" href={resume} target="_blank">resume</a>
-          </li>
-          <li>
-            <a class="menu-item" href="https://github.com/gv14982" target="_blank">github</a>
-          </li>
-          <li>
-            <a class="menu-item" href="https://www.linkedin.com/in/graham-vasquez/" target="_blank">linkedin</a>
-          </li>
-          <li>
-            <a class="menu-item" href="mailto:graham@gvasquez.dev" target="_blank">email me</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <main>
-      <div class="flex">
-        <figure>
-          <Image class="photo" src={photo} alt="Photo of me and my cat, Fritzy" />
-          <figcaption>Me and my cat, Fritzy</figcaption>
-        </figure>
-        <div class="info">
+<Layout title="Graham's lil site">
+  <main>
+    <Nav />
+    <div class="flex">
+      <figure>
+        <Image class="photo" src={photo} alt="Photo of me and my cat, Fritzy" />
+        <figcaption>Me and my cat, Fritzy</figcaption>
+      </figure>
+      <div class="info">
         <div class="about">
           <h2>aboutMe :=</h2>
-          <p>I'm a software engineer from Philadelphia (<b>Go birds</b> 🦅) with a love of building things that make people's lives <em>easier</em>. I've primarly worked in the web world, from crafting CSS to managing deployments in kubernetes. I definitely lean towards the backend, but I like to be flexible and help where it's needed.</p>
-          <p>In my free time I enjoy boardgames (My current favorite is the <a href="https://contentiongames.com/games/slay/" target="_blank">Slay the Spire Boardgame</a>) and playing my guitar. I also have a love of mechanical keyboards (Linear switches are where it's at)</p>
-          <p>The picture is of me and my cat Fritzy. He followed me home and is the sweetest little man I know.</p>
+          <p>
+            I'm a software engineer from Philadelphia (<b>Go birds</b> 🦅) with a
+            love of building things that make people's lives <em>easier</em>.
+            I've primarly worked in the web world, from crafting CSS to managing
+            deployments in kubernetes. I definitely lean towards the backend,
+            but I like to be flexible and help where it's needed.
+          </p>
+          <p>
+            In my free time I enjoy boardgames (My current favorite is the <a
+              href="https://contentiongames.com/games/slay/"
+              target="_blank">Slay the Spire Boardgame</a
+            >) and playing my guitar. I also have a love of mechanical keyboards
+            (Linear switches are where it's at)
+          </p>
+          <p>
+            The picture is of me and my cat Fritzy. He followed me home and is
+            the sweetest little man I know.
+          </p>
         </div>
         <div class="projects">
           <h2>currentProjects :=</h2>
           <div class="flex">
             <div class="terminal-card">
               <header>
-                  <h3>PHLask</h3>
+                <h3>PHLask</h3>
               </header>
               <div>
                 <p>
-                  <a href="https://phlask.me" target="_blank">PHLask</a> is an application that aims to make finding free resources easier. We recently completed dev work on our v2 application that will allow people to search for water, foraging, food, and clothing.
+                  <a href="https://phlask.me" target="_blank">PHLask</a> is an application
+                  that aims to make finding free resources easier. We recently completed
+                  dev work on our v2 application that will allow people to search
+                  for water, foraging, food, and clothing.
                 </p>
               </div>
             </div>
             <div class="terminal-card">
               <header>
-                  <h3>PHL Code Club</h3>
+                <h3>PHL Code Club</h3>
               </header>
               <div>
                 <p>
-                  I co-organize a monthly meetup in Philadelphia called <a href="https://phlcode.club" target="_blank">PHL Code Club</a>. Our focus is interactive sessions, but we also like to do project showcases or more traditional talks from time to time. It has been awesome to improve my communication and continue learning while building a community of like minded people. It has also given me opportunities to mentor and teach others individually.
+                  I co-organize a monthly meetup in Philadelphia called <a
+                    href="https://phlcode.club"
+                    target="_blank">PHL Code Club</a
+                  >. Our focus is interactive sessions, but we also like to do
+                  project showcases or more traditional talks from time to time.
+                  It has been awesome to improve my communication and continue
+                  learning while building a community of like minded people. It
+                  has also given me opportunities to mentor and teach others
+                  individually.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        </div>
       </div>
-      <dialog id="term-dialog">
-        <div class="terminal-card">
-          <header><h4>TERMINAL</h4><button class="btn btn-error" id="close-term"><b>x</b></button></header>
-          <div id="app"></div>
-        </div>
-      </dialog>
-    </main>
+    </div>
+    <dialog id="term-dialog">
+      <div class="terminal-card">
+        <header>
+          <h4>TERMINAL</h4><button class="btn btn-error" id="close-term"
+            ><b>x</b></button>
+        </header>
+        <div id="app"></div>
+      </div>
+    </dialog>
+  </main>
 </Layout>
 
 <script>
   import { Shell } from "../terminal/terminal";
-  const dialog: HTMLDialogElement | null = document.querySelector("#term-dialog");
+  const dialog: HTMLDialogElement | null =
+    document.querySelector("#term-dialog");
   let shell: Shell;
   function openDialog() {
     dialog?.showModal();
@@ -97,35 +104,7 @@ import "terminal.css";
   document.querySelector("#close-term")?.addEventListener("click", closeDialog);
 </script>
 
-<style lang="scss">
-  @use "../assets/macchiato.scss";
-
-  :root {
-    --xt-bg: #{macchiato.$crust} !important;
-    --xt-fg: #{macchiato.$text} !important;
-    --xt-font-family: "FiraCode Nerd Font Mono";
-    --xt-font-size: 16px;
-    --global-font-size: 16px;
-    --background-color: #{macchiato.$base} !important;
-    --font-color: #{macchiato.$text} !important;
-    --invert-font-color: #{macchiato.$crust} !important;
-    --primary-color: #{macchiato.$sapphire} !important;
-    --secondary-color: #{macchiato.$lavender} !important;
-    --error-color: #{macchiato.$red} !important;
-    --progress-bar-background: #{macchiato.$surface2} !important;
-    --progress-bar-fill: #{macchiato.$teal} !important;
-    --code-bg-color: #{macchiato.$surface1} !important;
-  }
-
-  body {
-    padding: 0 1rem;
-  }
-
-  main {
-    margin: auto;
-    max-width: 1200px;
-  }
-
+<style>
   #term-dialog {
     padding: 0;
     color: var(--font-color);
@@ -222,24 +201,23 @@ import "terminal.css";
 </style>
 
 <style is:global lang="scss">
-  @use "../assets/macchiato.scss";
   .markdown {
     margin: 0.5rem;
     padding: 1rem;
     h1 {
-      color: macchiato.$red;
+      color: var(--red);
     }
 
     h2 {
-      color: macchiato.$peach;
+      color: var(--peach);
     }
 
     p {
-      color: macchiato.$lavender;
+      color: var(--lavender);
     }
 
     a {
-      color: macchiato.$sapphire;
+      color: var(--sapphire);
     }
 
     img {
@@ -247,6 +225,6 @@ import "terminal.css";
       max-width: unset !important;
     }
 
-    background-color: macchiato.$mantle;
+    background-color: var(--mantle);
   }
 </style>

@@ -57,9 +57,9 @@ export class Directory {
         hidden,
         index === segments.length - 1
           ? files?.reduce<Map<string, File>>((acc, curr) => {
-            acc.set(curr.name, curr);
-            return acc;
-          }, new Map())
+              acc.set(curr.name, curr);
+              return acc;
+            }, new Map())
           : undefined,
       );
       if (index === 0) {
