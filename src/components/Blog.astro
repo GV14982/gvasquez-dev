@@ -67,7 +67,7 @@ const categories = await getCollection("categories");
           <div class="terminal-card">
             <header>{post.data.title}</header>
             <div>
-              <h5>Published on: {post.data.pubDate}</h5>
+              <h5>Published on: {post.data.pubDate.toDateString()}</h5>
               {post.data.summary}
             </div>
           </div>
