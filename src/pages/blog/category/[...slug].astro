@@ -29,7 +29,10 @@ export async function getStaticPaths() {
 const { posts, category } = Astro.props;
 ---
 
-<Layout title="Graham's lil blog">
+<Layout
+  title="Graham's lil blog"
+  url={`https://gvasquez.dev/blog/category/${category.id}`}
+>
   <main>
     <Nav />
     <Blog posts={posts} category={category} />
