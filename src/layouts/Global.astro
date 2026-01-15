@@ -17,7 +17,10 @@ const { title, ogType, image, url } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta property="og:type" content={ogType ?? "website"} />
-    <meta property="og:image" content={image ?? "/og-image.png"} />
+    <meta
+      property="og:image"
+      content={image ?? "https://gvasquez.dev/og-image.png"}
+    />
     <meta property="og:url" content={url} />
     <meta property="og:title" content={title} />
     <slot name="og-props" />
