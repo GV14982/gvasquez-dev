@@ -12,12 +12,7 @@ type Post = Omit<CollectionEntry<"blog">, "data"> & {
     categories: CollectionEntry<"categories">[];
   };
 };
-// interface Props {
-// post: Post;
-// }
 
-// Get all entries from a collection.
-// Requires the name of the collection as an argument.
 const posts = await getCollection("blog").then((posts) =>
   Promise.all(
     posts
