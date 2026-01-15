@@ -1,0 +1,7 @@
+{
+  "$schema": "../../.astro/collections/categories.schema.json",
+  "name": "Computing",
+  "background": "--green",
+  "color": "--surface0",
+  "related": ["open-source"]
+}

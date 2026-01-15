@@ -1,0 +1,33 @@
+---
+import { getEntries } from "astro:content";
+import Nav from "../../components/Nav.astro";
+import Layout from "../../layouts/Global.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import Blog from "../../components/Blog.astro";
+type Post = Omit<CollectionEntry<"blog">, "data"> & {
+  data: Omit<CollectionEntry<"blog">["data"], "categories">;
+} & {
+  data: {
+    categories: CollectionEntry<"categories">[];
+  };
+};
+
+const posts = await getCollection("blog").then((posts) =>
+  Promise.all(
+    posts
+      .sort((a, b) => a.data.pubDate.getTime() - b.data.pubDate.getTime())
+      .map(async (p) => {
+        p.data.categories = await getEntries(p.data.categories);
+        return p as Post;
+      }),
+  ),
+);
+---
+
+<Layout title="Graham's lil blog">
+  <main>
+    <Nav />
+    <Blog posts={posts} />
+  </main>
+</Layout>

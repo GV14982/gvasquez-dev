@@ -9,10 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.14",
     "@xterm/xterm": "^5.5.0",
-    "astro": "^5.4.2",
+    "astro": "^5.16.9",
     "marked": "^15.0.7",
     "mime": "^4.0.6",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
     "sass": "^1.85.1",
     "sharp": "^0.33.5",
     "terminal.css": "^0.7.5",
@@ -20,6 +23,7 @@
   },
   "devDependencies": {
     "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
     "wrangler": "^4.30.0"
   }
 }
