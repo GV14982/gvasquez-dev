@@ -2,9 +2,12 @@
 import "terminal.css";
 interface Props {
   title: string;
+  url: string;
+  image?: string;
+  ogType?: string;
 }
 
-const { title } = Astro.props;
+const { title, ogType, image, url } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,6 +16,14 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content={ogType ?? "website"} />
+    <meta
+      property="og:image"
+      content={image ?? "https://gvasquez.dev/og-image.png"}
+    />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <slot name="og-props" />
     <title>{title}</title>
   </head>
   <body>

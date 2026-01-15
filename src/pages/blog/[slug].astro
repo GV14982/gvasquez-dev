@@ -22,7 +22,24 @@ const categories = await getEntries(post.data.categories);
 const { Content, headings } = await render(post);
 ---
 
-<Global title={post.data.title}>
+<Global
+  title={post.data.title}
+  url={`https://gvasquez.dev/blog/${post.id}`}
+  ogType="article"
+>
+  <Fragment slot="og-props">
+    <meta property="article:author" content="Graham Vasquez" />
+    <meta
+      property="article:published_time"
+      content={post.data.pubDate.toISOString()}
+    />
+    <meta property="article:section" content="Technology" />
+    {
+      categories.map((c) => (
+        <meta property="article:tag" content={c.data.name} />
+      ))
+    }
+  </Fragment>
   <main>
     <Nav />
     <h1>{post.data.title}</h1>
