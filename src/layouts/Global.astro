@@ -5,9 +5,10 @@ interface Props {
   url: string;
   image?: string;
   ogType?: string;
+  description?: string;
 }
 
-const { title, ogType, image, url } = Astro.props;
+const { title, ogType, image, url, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,6 +24,10 @@ const { title, ogType, image, url } = Astro.props;
     />
     <meta property="og:url" content={url} />
     <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content={description ?? "My little slice of the internet :)"}
+    />
     <slot name="og-props" />
     <title>{title}</title>
   </head>
