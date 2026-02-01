@@ -16,7 +16,7 @@ export async function getStaticPaths() {
       const posts = await getCollection("blog").then((posts) =>
         posts
           .filter((p) => p.data.categories.some((c) => c.id == category.id))
-          .sort((a, b) => a.data.pubDate.getTime() - b.data.pubDate.getTime()),
+          .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()),
       );
       return {
         params: { slug: category.id },
