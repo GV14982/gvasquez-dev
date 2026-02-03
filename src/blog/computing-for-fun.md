@@ -24,7 +24,7 @@ probably, I've never bothered to check. Do I have as much _fun_? No, not really.
 Learning how to code is one of the best decisions I have ever made. However, I
 think the _reason_ I chose to learn to code is even more important. When I was 8
 years old my older brother Chris modeled one of my Bionicles with a piece of
-software[^2]. I remember just how excited I was to see the end result. I would bother
+software.[^1] I remember just how excited I was to see the end result. I would bother
 him all the time to see if he was done yet. Seeing that 3D Bionicle was truly
 magical. That moment set into motion a new life plan for me. I wanted to make
 computers do **_stuff_**. Here I am, 25 years later and I am _still_ amazed
@@ -51,7 +51,7 @@ all the ethical dilemmas related to AI at scale, they are just kind of _boring_.
 I hear a lot of talk of AI "democratizing" software. Sure, if you want to pay
 for a subscription to a frontier model provider and hope they don't jack up
 the prices on you or revoke your license because you didn't use _their_ coding
-agent. Or even better, sell a kidney or two to purchase some GPUs and struggle
+agent.[^2] Or even better, sell a kidney or two to purchase some GPUs and struggle
 through the process of getting your own LLM inference machine running.
 
 I use LLM's at work because it's expected of me. I don't want to get left behind
@@ -77,13 +77,13 @@ Learning should be _fun_ and feel rewarding. Not like some task that **needs**
 to be completed or risk your livelihood. A friend of mine is going back to school,
 and the amount she stresses to deal with the arbitrary requirements for learning
 at her institution frankly **_pisses me off_**. Learning should be challenging,
-not _stressful_.[^1]
+not _stressful_.[^3]
 
 At the end of the day, I just want to do my part in building a community for people
 to have _fun_ while learning. We focus on interactivity over pure knowledge. Sometimes
 you just need to get your hands onto something to get the ideas to click.
 
-I have taken on more mentors recently and my main goal with that is to guide them
+I have been doing more mentoring recently and my main goal is to guide them
 towards what they find _fun_ about computing. Could be building a new application
 to solve a problem you have, could be learning a new language just because. It
 doesn't really matter as long as you are having fun. You will get infinitely more
@@ -113,10 +113,15 @@ Here are some of the things that inspired me to focus on the fun in technology:
     they are still around when I either get laid off or can take a sabbatical :,)
 - Christina's enthusiasm
   - Seriously, do this with your friends. We have since added [Taj](https://phlcode.club/organizers/taj) and
-    [Amaury](https://phlcode.club/organizers/amaury/) as co-organizers and it's _so much fun_.
+    [Amaury](https://phlcode.club/organizers/amaury/) as co-organizers and it's
+    _so much fun_.
 
-If you start something, even just a small get together at a coffee shop, please send me an email and tell me about it!! Reach out at [computing-for-fun@gvasquez.dev](mailto:computing-for-fun@gvasquez.dev?subject=I%20Started%20Computing%20For%20Fun!), I can't wait to hear about what you are doing :D
+If you start something, even just a small get together at a coffee shop, please
+send me an email and tell me about it!! Reach out at [computing-for-fun@gvasquez.dev](mailto:computing-for-fun@gvasquez.dev?subject=I%20Started%20Computing%20For%20Fun!),
+I can't wait to hear about what you are doing :D
 
-[^1]: <https://pmc.ncbi.nlm.nih.gov/articles/PMC6380371/#sec5>
+[^1]: I had to check with him, but he used Lightroom!
 
-[^2]: I had to check with him, but he used Lightroom!
+[^2]: As an OpenCode user with a company supplied Copilot subscription, plz don't do this GitHub :( <https://venturebeat.com/technology/anthropic-cracks-down-on-unauthorized-claude-usage-by-third-party-harnesses>
+
+[^3]: Relevant article <https://pmc.ncbi.nlm.nih.gov/articles/PMC6380371/#sec5>
