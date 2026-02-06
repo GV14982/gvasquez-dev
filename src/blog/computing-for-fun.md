@@ -1,7 +1,7 @@
 ---
 title: Computing For Fun
 summary: With LLM's, and the tooling around them, becoming better and more wide spread, we should ask ourselves... Why are we even doing this?
-pubDate: "2026-02-01"
+pubDate: "2026-02-03"
 editedDates: []
 categories:
   - computing
@@ -39,10 +39,10 @@ of success for software engineers.
 ## My Frustrations
 
 The more I ingrain myself in the computing industry, the more I yearn for that
-feeling of wonder. The landscape surround computing and technology as a whole has
-changed so much even since I got started. The shift towards AI **everything** is
-exhausting. Sometimes I just want to write my own emails, manage my own calendar,
-and write my own damn code! That sounds pretty "old man yells at cloud" of me,
+feeling of wonder. The landscape surrounding computing and technology as a whole
+has changed so much even since I got started. The shift towards AI **everything**
+is exhausting. Sometimes I just want to write my own emails, manage my own calendar,
+and write my own damn code! That sounds pretty "old man yells at cloud"[^2] of me,
 but this is my blog and I'll yell at as many clouds as I please! Even ignoring
 all the ethical dilemmas related to AI at scale, they are just kind of _boring_.
 
@@ -51,7 +51,7 @@ all the ethical dilemmas related to AI at scale, they are just kind of _boring_.
 I hear a lot of talk of AI "democratizing" software. Sure, if you want to pay
 for a subscription to a frontier model provider and hope they don't jack up
 the prices on you or revoke your license because you didn't use _their_ coding
-agent.[^2] Or even better, sell a kidney or two to purchase some GPUs and struggle
+agent.[^3] Or even better, sell a kidney or two to purchase some GPUs and struggle
 through the process of getting your own LLM inference machine running.
 
 I use LLM's at work because it's expected of me. I don't want to get left behind
@@ -77,7 +77,7 @@ Learning should be _fun_ and feel rewarding. Not like some task that **needs**
 to be completed or risk your livelihood. A friend of mine is going back to school,
 and the amount she stresses to deal with the arbitrary requirements for learning
 at her institution frankly **_pisses me off_**. Learning should be challenging,
-not _stressful_.[^3]
+not _stressful_.[^4]
 
 At the end of the day, I just want to do my part in building a community for people
 to have _fun_ while learning. We focus on interactivity over pure knowledge. Sometimes
@@ -122,6 +122,8 @@ I can't wait to hear about what you are doing :D
 
 [^1]: I had to check with him, but he used Lightroom!
 
-[^2]: As an OpenCode user with a company supplied Copilot subscription, plz don't do this GitHub :( <https://venturebeat.com/technology/anthropic-cracks-down-on-unauthorized-claude-usage-by-third-party-harnesses>
+[^2]: Christina didn't know what I meant by this, so here is the source: <https://knowyourmeme.com/memes/old-man-yells-at-cloud>
 
-[^3]: Relevant article <https://pmc.ncbi.nlm.nih.gov/articles/PMC6380371/#sec5>
+[^3]: As an OpenCode user with a company supplied Copilot subscription, plz don't do this GitHub :( <https://venturebeat.com/technology/anthropic-cracks-down-on-unauthorized-claude-usage-by-third-party-harnesses>
+
+[^4]: Relevant article <https://pmc.ncbi.nlm.nih.gov/articles/PMC6380371/#sec5>
