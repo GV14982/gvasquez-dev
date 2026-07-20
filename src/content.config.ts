@@ -1,9 +1,10 @@
 // 1. Import utilities from `astro:content`
 import { defineCollection, reference } from "astro:content";
 // 2. Import loader(s)
-import { glob, file } from "astro/loaders";
+import { glob } from "astro/loaders";
 // 3. Import Zod
 import { z } from "astro/zod";
+import { presentationLoader } from "./presentation-loader";
 
 // 4. Define your collection(s)
 const blog = defineCollection({
@@ -27,5 +28,9 @@ const categories = defineCollection({
   }),
 });
 
+const presentations = defineCollection({
+  loader: presentationLoader()
+})
+
 // 5. Export a single `collections` object to register your collection(s)
-export const collections = { blog, categories };
+export const collections = { blog, categories, presentations };

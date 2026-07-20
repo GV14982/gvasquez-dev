@@ -1,0 +1,3 @@
+[submodule "public/presentations"]
+	path = public/presentations
+	url = git@github.com:GV14982/presentations.git

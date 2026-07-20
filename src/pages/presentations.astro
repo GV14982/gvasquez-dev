@@ -1,0 +1,18 @@
+---
+import { getEntries } from "astro:content";
+import Nav from "../components/Nav.astro";
+import Layout from "../layouts/Global.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+const presentations = await getCollection("presentations");
+---
+
+<Layout title="Graham's lil presentations" url="https://gvasquez.dev/presentations">
+  <main>
+    <Nav />
+    <ul>
+      {presentations.map(p => <li><a href={`/presentations/${p.data.folder}/${p.id}`}>{p.id}</a></li>)}
+    </ul>
+  </main>
+</Layout>

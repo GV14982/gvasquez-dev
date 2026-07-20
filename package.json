@@ -24,6 +24,7 @@
     "xterminal": "^2.1.11"
   },
   "devDependencies": {
+    "@types/node": "^26.1.1",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "wrangler": "^4.30.0"
