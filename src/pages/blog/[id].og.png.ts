@@ -5,7 +5,7 @@ import sharp from "sharp"
 
 const typst = NodeCompiler.create({
   fontArgs: [
-    { fontPaths: ["src/assets/fonts/maple-mono"] },
+    { fontPaths: ["../../assets/fonts/maple-mono"] },
   ]
 })
 
