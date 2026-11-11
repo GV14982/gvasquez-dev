@@ -2,13 +2,11 @@ import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro";
 import { getCollection } from "astro:content";
 import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler"
 import sharp from "sharp"
-import { readdirSync, readFileSync } from "node:fs"
-import { resolve } from "node:path";
 
-const path = resolve("src", "assets", "fonts", "maple-mono")
-const dir = readdirSync(path)
 const typst = NodeCompiler.create({
-  fontArgs: dir.map(f => ({ fontBlobs: [Buffer.from(readFileSync(`${path}/${f}`).buffer)] }))
+  fontArgs: [
+    { fontPaths: ["MapleMonoNF-TTF"] },
+  ]
 })
 
 export const getStaticPaths = (async () => {
