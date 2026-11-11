@@ -1,0 +1,50 @@
+{
+  "links": [
+    {
+      "name": "blog",
+      "url": "/blog",
+      "target": "_blank"
+    },
+    {
+      "name": "talks",
+      "url": "/presentations",
+      "target": "_blank"
+    },
+    {
+      "name": "rss",
+      "url": "/rss.xml",
+      "target": "_blank"
+    },
+    {
+      "name": "email me",
+      "rel": "me",
+      "url": "mailto:graham@gvasquez.dev",
+      "target": "_blank"
+    },
+    {
+      "id": "code-forges",
+      "name": "code",
+      "color": "var(--sapphire)",
+      "links": [
+        {
+          "name": "codeberg",
+          "rel": "me",
+          "url": "https://codeberg.org/gvasquez",
+          "target": "_blank"
+        },
+        {
+          "name": "tangled",
+          "rel": "me",
+          "url": "https://tangled.org/gvasquez.dev",
+          "target": "_blank"
+        },
+        {
+          "name": "github",
+          "rel": "me",
+          "url": "https://github.com/gv14982",
+          "target": "_blank"
+        }
+      ]
+    }
+  ]
+}

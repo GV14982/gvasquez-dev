@@ -9,9 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.14",
+    "@astrojs/markdown-remark": "^7.3.3",
+    "@astrojs/rss": "4.0.19",
+    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0",
     "@xterm/xterm": "^5.5.0",
-    "astro": "^5.16.9",
+    "astro": "7.4.1",
     "marked": "^15.0.7",
     "mdast-util-to-string": "^4.0.0",
     "mime": "^4.0.6",

@@ -25,6 +25,8 @@ const { Content, headings, remarkPluginFrontmatter } = await render(post);
 <Global
   title={post.data.title}
   url={`https://gvasquez.dev/blog/${post.id}`}
+  image={`https://gvasquez.dev/blog/${post.id}.og.png`}
+  description={post.data.summary}
   ogType="article"
 >
   <Fragment slot="og-props">

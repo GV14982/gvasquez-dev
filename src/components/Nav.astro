@@ -1,5 +1,7 @@
 ---
-import resume from "../assets/resume.pdf";
+import { getEntry } from "astro:content";
+
+const links = await getEntry("links", "links");
 ---
 
 <nav class="terminal-nav">
@@ -10,58 +12,97 @@ import resume from "../assets/resume.pdf";
   </span>
   <div class="terminal-menu">
     <ul>
-      <li>
-        <a class="menu-item" href="/blog">blog</a>
-      </li>
-      <li>
-        <a class="menu-item" href={resume} target="_blank">resume</a>
-      </li>
-      <li>
-        <a
-          class="menu-item"
-          rel="me"
-          href="https://github.com/gv14982"
-          target="_blank">github</a
-        >
-      </li>
-      <li>
-        <a
-          class="menu-item"
-          rel="me"
-          href="https://www.linkedin.com/in/graham-vasquez/"
-          target="_blank">linkedin</a
-        >
-      </li>
-      <li>
-        <a
-          class="menu-item"
-          rel="me"
-          href="mailto:graham@gvasquez.dev"
-          target="_blank">email me</a
-        >
-      </li>
+      {
+        links?.data.map((link) => {
+          if ("url" in link) {
+            return (
+              <li>
+                <a
+                  class="menu-item"
+                  href={link.url}
+                  rel={link.rel}
+                  target={link.target}
+                >
+                  {link.name}
+                </a>
+              </li>
+            );
+          }
+
+          return (
+            <li>
+              <button popovertarget={link.id} class="btn menu-item">
+                {link.name}
+              </button>
+              <ul id={link.id} popover>
+                {link.links.map((l) => (
+                  <li>
+                    <a
+                      class="menu-item"
+                      href={l.url}
+                      rel={l.rel}
+                      target={l.target}
+                    >
+                      {l.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        })
+      }
     </ul>
   </div>
 </nav>
 
+<style>
+  ul {
+    li:last-of-type {
+      display: inline-block;
+      position: relative;
+      ul {
+        border: none;
+        margin-top: 0.25rem;
+        padding: 1rem !important;
+        background-color: var(--surface0);
+        li {
+          margin-bottom: 0.25rem;
+        }
+      }
+      button {
+        anchor-name: --code-forges;
+        background-color: var(--sapphire);
+      }
+    }
+  }
+  [popover] {
+    &:popover-open {
+      display: block;
+    }
+    display: none;
+    position-anchor: --code-forges;
+    position-area: bottom;
+    width: fit-content;
+  }
+</style>
+
 <style is:global>
   /* God this is ugly lol */
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 900px) {
     .terminal-nav {
       align-items: flex-start !important;
-      flex-direction: row;
+      flex-direction: column;
       span {
         margin-top: calc(var(--global-space) * 2) !important;
       }
     }
+  }
+
+  @media screen and (max-width: 30rem) {
     .terminal-menu {
       ul {
         margin-top: calc(var(--global-space) * 2) !important;
-        flex-direction: column !important;
-        align-items: flex-end !important;
-      }
-      li {
-        margin-right: 2em !important;
       }
     }
   }

@@ -1,5 +1,6 @@
 ---
 import "terminal.css";
+import { Font } from "astro:assets";
 interface Props {
   title: string;
   url: string;
@@ -29,6 +30,7 @@ const { title, ogType, image, url, description } = Astro.props;
       content={description ?? "My little slice of the internet :)"}
     />
     <slot name="og-props" />
+    <Font cssVariable="--font-maple-mono-nf" />
     <title>{title}</title>
   </head>
   <body>
@@ -66,7 +68,7 @@ const { title, ogType, image, url, description } = Astro.props;
     --crust: #181926;
     --xt-bg: var(--crust) !important;
     --xt-fg: var(--text) !important;
-    --xt-font-family: "FiraCode Nerd Font Mono";
+    --xt-font-family: var(--font-maple-mono-nf);
     --xt-font-size: 16px;
     --global-font-size: 16px;
     --background-color: var(--base) !important;
@@ -80,63 +82,15 @@ const { title, ogType, image, url, description } = Astro.props;
     --code-bg-color: var(--surface1) !important;
   }
 
-  @font-face {
-    font-family: "FiraCode Nerd Font Mono";
-    src: url("/fonts/FiraCodeNFM-Light.woff2") format("woff2");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "FiraCode Nerd Font Mono Med";
-    src: url("/fonts/FiraCodeNFM-Med.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "FiraCode Nerd Font Mono Ret";
-    src: url("/fonts/FiraCodeNFM-Ret.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "FiraCode Nerd Font Mono";
-    src: url("/fonts/FiraCodeNFM-Reg.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "FiraCode Nerd Font Mono SemBd";
-    src: url("/fonts/FiraCodeNFM-SemBd.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "FiraCode Nerd Font Mono";
-    src: url("/fonts/FiraCodeNFM-Bold.woff2") format("woff2");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-
   * {
     box-sizing: border-box;
-    font-family: "FiraCode Nerd Font Mono", sans-serif;
+    font-family: var(--font-maple-mono-nf), sans-serif;
     font-weight: normal;
     font-style: normal;
   }
 
   b {
-    font-family: "FiraCode Nerd Font Mono", sans-serif;
+    font-family: var(--font-maple-mono-nf), sans-serif;
     font-weight: bold;
   }
 

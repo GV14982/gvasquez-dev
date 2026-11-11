@@ -1,0 +1,21 @@
+{
+  "about": {
+    "bio": "I'm a nerd from Philadelphia.",
+    "likes": [
+      "computers",
+      "animals",
+      "board games",
+      "public transit"
+    ],
+    "dislikes": [
+      "mean people",
+      "cars",
+      "LLMs"
+    ],
+    "setup": [
+      "Thinkpad T480",
+      "Ferris Sweep MX",
+      "Ploopy Trackball"
+    ]
+  }
+}

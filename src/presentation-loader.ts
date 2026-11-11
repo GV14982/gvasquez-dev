@@ -1,5 +1,5 @@
 import type { Loader } from 'astro/loaders';
-import { z } from 'astro:schema';
+import { z } from 'astro/zod';
 import { lstatSync, readdirSync } from "fs"
 import path from 'path';
 
